@@ -6,39 +6,39 @@ const { upload } = require('../configurations/uploadImage');
 
 User.post('/Messages/:id', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
-        const {id} = req.params;
+        const { id } = req.params;
         const Message = {
             Message: req.body.Message
         }
-        connection.query(`INSERT INTO message (id_emmiter,id_receiver,Message,created_at) values ('${authdata.row[0].ID_USER}','${id}','${Message.Message}',CURRENT_TIMESTAMP())`, (err,row,fields) => {
-            if (err){
+        connection.query(`INSERT INTO message (id_emmiter,id_receiver,Message,created_at) values ('${authdata.row[0].ID_USER}','${id}','${Message.Message}',CURRENT_TIMESTAMP())`, (err, row, fields) => {
+            if (err) {
                 console.log(err);
-            }else{
+            } else {
                 res.json('Mensaje enviado');
             }
-            
+
         });
     });
 });
 
-User.get('/Messages', (req,res) => {
+User.get('/Messages', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
-        connection.query(`SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}' and STATUS = '1'`, (err,row) =>{
-            if(err){
+        connection.query(`SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}' and STATUS = '1'`, (err, row) => {
+            if (err) {
                 console.log(err);
-            }else{
+            } else {
                 res.json(row);
             }
         });
     });
 });
 
-User.delete('/Messages/:id', (req,res) => {
+User.delete('/Messages/:id', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
-        connection.query(`SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}'`, (err,row) =>{
-            if(err){
+        connection.query(`SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}'`, (err, row) => {
+            if (err) {
                 console.log(err);
-            }else{
+            } else {
                 res.json(row);
             }
         });
