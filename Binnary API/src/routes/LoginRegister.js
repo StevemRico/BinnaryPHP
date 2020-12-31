@@ -47,7 +47,7 @@ UsersLR.post("/Register", (req,res) => {
         lastname: req.body.lastname,
     }
 
-    connection.query(`SELECT USERNAME FROM users where username = '${userdata.username}' LIMIT 1`,
+    connection.query(`SELECT USERNAME,EMAIL FROM users where username = '${userdata.username}' LIMIT 1`,
     function (err,rows,fields){
         if(err){
             console.log(err);
@@ -56,30 +56,20 @@ UsersLR.post("/Register", (req,res) => {
                 if(rows[0].USERNAME === userdata.username){
                     // res.sendStatus(400);
                     res.send({message: "EL USERNAME YA ESTÁ EN USO"});
+                }else if(row[0].EMAIL === userdata.email){
+                    // res.sendStatus(400);
+                    res.send({message: "El email ya se encuentra registrado"});
                 }
+
             }else{
-                connection.query(`SELECT EMAIL FROM users where email = '${userdata.email}' LIMIT 1`,function (err,row,fields) {
-                    if(err){
-                        console.log(err);
-                    }else{
-                        if(row[0] !== undefined){
-                            if(row[0].EMAIL === userdata.email){
-                                // res.sendStatus(400);
-                                res.send({message: "El email ya se encuentra registrado"});
-                            }
+                connection.query(`INSERT INTO users (Username,email,password,first_name,lastname,role,date_register) values ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.first_name}','${userdata.lastname}','1',CURRENT_TIMESTAMP())`,
+                    function (err, rows, fields) {
+                        if(err){ 
+                            console.log(err); 
                         }else{
-                            connection.query(`INSERT INTO users (Username,email,password,first_name,lastname,role,date_register) values ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.first_name}','${userdata.lastname}','1',CURRENT_TIMESTAMP())`,
-                                function (err, rows, fields) {
-                                    if(err){ 
-                                        console.log(err); 
-                                    }else{
-                                        res.json("Usuario registrado");
-                                    }
-                            });
+                            res.json("Usuario registrado");
                         }
-                    }
-                });
-                
+                    });
             }
         }
     });
