@@ -16,8 +16,9 @@ app.use(bodyParser.text());
 app.use(express.static(path.join(__dirname, '../img')));
 
 // Routes
-app.use('/API',require('./routes/LoginRegister'));
-app.use('/API',verifyToken,require('./routes/Publications'));
+app.use('/',require('./routes/LoginRegister'));
+app.use('/',verifyToken,require('./routes/Users'));
+app.use('/',verifyToken,require('./routes/Publications'));
 
 // Starting the server
 app.listen(app.get('port'), () => { console.log(`Server on port ${app.get('port')}`); });

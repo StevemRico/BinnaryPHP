@@ -21,6 +21,7 @@ Publication.get('/Publications', (req, res) => {
     }
   });
 });
+
 // GET Unique
 Publication.get('/Publications/:id', (req, res) => {
   jwt.verify(req.token, 'secretkey', (err, authdata) => {
@@ -85,7 +86,6 @@ Publication.delete('/Publications/:id', (req, res) => {
 });
 
 // PUT
-
 Publication.put('/Publications/:id', upload.single('file') ,(req, res) => {
   jwt.verify(req.token, 'secretkey', (err,authdata) => {
     if(err){
