@@ -31,7 +31,7 @@ UsersLR.post("/Login", (req,res) => {
                         }
                     });
                 }else{
-                    res.json("Usuario o contraseña incorrectas");
+                    res.json("Usuario o contraseña son incorrectas");
                 }
             }
         });
