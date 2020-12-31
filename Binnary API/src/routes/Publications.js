@@ -10,8 +10,7 @@ Publication.get('/Publications', (req, res) => {
     if (err) {
       res.sendStatus(403);
     } else {
-      connection.query(
-        'SELECT * FROM Publications WHERE publication_state = 1', (err, rows, fields) => {
+      connection.query('SELECT * FROM Publications WHERE publication_state = 1', (err, rows, fields) => {
           if (err) {
             console.log(err);
           } else {
