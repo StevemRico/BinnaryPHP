@@ -4,13 +4,13 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'red',
+    database: 'binnary',
     multipleStatements: true
 });
 
-connection.connect(e => {
-    if (e) {
-        console.error(e);
+connection.connect(err => {
+    if (err) {
+        console.error(err);
         return;
     } else {
         console.log('Database is Online!!!');
