@@ -3,7 +3,7 @@ const fs = require('fs');
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'D:/Proyecto/api/src/img');
+      cb(null, 'D:/Binnary/Binnary API/src/img');
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now() + '.' +file.mimetype.split('/')[1]);
