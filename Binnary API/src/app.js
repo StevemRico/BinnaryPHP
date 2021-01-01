@@ -1,6 +1,6 @@
 const express = require('express');
-const verifyToken = require('./configurations/verifyToken');
 const bodyParser = require('body-parser');
+const verifyToken = require('./configurations/verifyToken');
 const { path } = require('./configurations/uploadImage');
 const app = express();
 

@@ -6,11 +6,11 @@ const { upload } = require('../configurations/uploadImage');
 
 User.post('/Messages/:id', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
-        const { id } = req.params;
         const Message = {
-            Message: req.body.Message
+            Message: req.body.Message,
+            id_receiver : req.body.Receiver
         }
-        connection.query(`INSERT INTO message (id_emmiter,id_receiver,Message,created_at) values ('${authdata.row[0].ID_USER}','${id}','${Message.Message}',CURRENT_TIMESTAMP())`, (err, row, fields) => {
+        connection.query(`INSERT INTO message (id_emmiter,id_receiver,Message,created_at) values ('${authdata.row[0].ID_USER}','${Message.id_receiver}','${Message.Message}',CURRENT_TIMESTAMP())`, (err, row, fields) => {
             if (err) {
                 console.log(err);
             } else {
