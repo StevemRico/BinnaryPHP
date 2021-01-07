@@ -18,6 +18,7 @@ Publication.get('/Publications', (req, res) => {
         });
     }
   });
+  const sql = 'SELECT * FROM Publications WHERE publication_state = 1';
 });
 
 Publication.get('/Publications/:id', (req, res) => {
