@@ -13,7 +13,7 @@ Publication.get('/Publications', (req, res) => {
           if (err) {
             throw err;
           } else {
-            res.json(rows);
+            res.json({publications: rows});
           }
         });
     }
