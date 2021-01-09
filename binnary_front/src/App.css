@@ -2,3 +2,113 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  /* #414970 #70585B #4C5270 #706541 #47704F */
+  --header-bg: #4c5270;
+  --color-header-text: #fcfcf2;
+  --keypad-login-register-bg: #4c5270;
+  --color-keypad-login-register: #fcfcf2;
+  --color-beige: #fffff5;
+
+  --font-size-header: 0.9em;
+  --font-size-max: ;
+  --font-size-mid: ;
+  --font-size-min: ;
+
+  --header-height: 45px;
+}
+
+/* HEADER */
+
+  .header{
+    background: var(--header-bg);
+    color: var(--color-header-text);
+    font-size: var(--font-size-header);
+    height: var(--header-height);
+    padding: 1%;
+    width: 100%;
+    min-width: 320px;
+  }
+
+/* HEADER */
+
+/* LOGIN - REGISTER */
+
+.grid-loginRegister{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 40px - var(--header-height));
+}
+
+.container-loginRegister{
+  min-width: 310px;
+  border: 0.5px solid gray;
+  border-radius: 9px;
+}
+.keypad-loginRegister{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+}
+
+.keypad-loginRegister .LoginRegister{
+  padding: 0.5em 0;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  /* background: gray; */
+}
+
+.FormLogin{
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  border-top: 0.5px solid gray;
+  padding: 0.5em;
+}
+
+.FormLogin input{
+  margin-bottom: 1%;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 0.5px solid gray;
+}
+
+.FormLogin h5{
+  color: gray;
+  padding: 0.3em;
+}
+
+.FormLogin button{
+  padding: 0.7em;
+  border: none;
+}
+
+.FormRegister{
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  border-top: 0.5px solid gray;
+  padding: 0.5em;
+}
+
+.FormRegister input{
+  margin-bottom: 1%;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 0.5px solid gray;
+}
+
+.FormRegister h5{
+  color: gray;
+  padding: 0.3em;
+}
+
+.FormRegister button{
+  padding: 0.7em;
+  border: none;
+}
+
+/* LOGIN - REGISTER */
+
+/* @media screen and (max-width: 768px){ } */

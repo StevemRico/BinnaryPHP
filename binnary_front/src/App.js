@@ -1,23 +1,28 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Login from './views/Login';
-import Register from './views/Register';
-import HeaderComponent from './components/header';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import HeaderComponent from './components/Header';
+import Home from './views/Home';
+
 
 function App() {
   return (
     <>
-      <Router>
-        <HeaderComponent/>
-        <Switch>
-          <Route exact path="/Login">
-            <Login />
-          </Route>
-          <Route exact path="/Register">
-            <Register />
-          </Route>
-        </Switch>
-      </Router>
+    <BrowserRouter>
+      <HeaderComponent/>
+      <Switch>
+        <Route exact path='/'>
+          <Home/>
+        </Route>
+        <Route exact path='/Login'> 
+          <Login />
+        </Route>
+        <Route exact path='/Register'>
+          <Register />
+        </Route>
+      </Switch>
+    </BrowserRouter>
     </>
   );
 }
