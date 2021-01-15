@@ -26,7 +26,7 @@ export default function Login() {
                 alert('Usuario o contraseña son incorrectas');
             }else{
                 setToken(response.data);
-                window.location.href = '/Home'
+                window.location.href = '/'
             }
         })
     }

@@ -4,25 +4,21 @@ import Login from './components/Login';
 import Register from './components/Register';
 import HeaderComponent from './components/Header';
 import Home from './views/Home';
-
-
+import FooterComponent from './components/Footer';
+import { useLocalStorage } from './hooks/useLocalStorage';
 function App() {
+  const [Token, setToken] = useLocalStorage('token', '');
   return (
     <>
-    <BrowserRouter>
-      <HeaderComponent/>
-      <Switch>
-        <Route exact path='/'>
-          <Home/>
-        </Route>
-        <Route exact path='/Login'> 
-          <Login />
-        </Route>
-        <Route exact path='/Register'>
-          <Register />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <HeaderComponent />
+        <Switch>
+          <Route exact path='/Login' component={Login} />
+          <Route exact path='/Register' component={Register} />
+          <Route exact path='/' component={Home} />
+        </Switch>
+        <FooterComponent />
+      </BrowserRouter>
     </>
   );
 }

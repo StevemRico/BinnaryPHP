@@ -2,9 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'D:/Binnary/binnary_api/src/img');
-    },
+  destination: path.join(__dirname, '../public/img'),
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now() + '.' +file.mimetype.split('/')[1]);
     }

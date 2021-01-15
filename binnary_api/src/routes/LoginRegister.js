@@ -38,6 +38,7 @@ UsersLR.post("/Login", (req, res) => {
 });
 
 UsersLR.post("/Register", (req, res) => {
+    const ProfileDefault = 'http://localhost:3030/img/ProfileDefault.png'
 
     const userdata = {
         username: req.body.username,
@@ -61,7 +62,11 @@ UsersLR.post("/Register", (req, res) => {
                     }
 
                 } else {
-                    connection.query(`INSERT INTO users (Username,email,password,phone_number,role,date_register) values ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.phone}','1',CURRENT_TIMESTAMP())`,
+                    const sql = `INSERT INTO users
+                                 (Username,email,password,phone_number,profile_image,role,status,date_register)
+                                  values 
+                                ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.phone}','${ProfileDefault}','1','1',CURRENT_TIMESTAMP())`;
+                    connection.query(sql,
                         function (err, rows, fields) {
                             if (err) {
                                 console.log(err);

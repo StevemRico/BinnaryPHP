@@ -35,7 +35,7 @@ export default function Register() {
                     <input type="password" placeholder="Password" name="password" autoComplete='off' onChange={handleChange} />
                     <input type="password" placeholder="Confirm Password" autoComplete='off' />
                     {/* HACER EL MOSTRAR CONTRASEÑA */}
-                    <input type="text" placeholder="Phone" autoComplete='off' onChange={handleChange} />
+                    <input type="text" placeholder="Phone" name='phone' autoComplete='off' onChange={handleChange} />
                     <button className="registerButtonForm" onClick={Post}>Sing Up</button>
                 </form>
             </div>

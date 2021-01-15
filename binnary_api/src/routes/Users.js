@@ -4,13 +4,30 @@ const jwt = require('jsonwebtoken');
 const connection = require('../configurations/conection');
 const { upload } = require('../configurations/uploadImage');
 
+User.get('/Users/Header', (req, res) => {
+    jwt.verify(req.token, 'secretkey', (err, authdata) => {
+        const sql = `SELECT id_user,username,profile_image FROM users WHERE ID_USER = '${authdata.row[0].ID_USER}' and STATUS = '1'`;
+        connection.query(sql, (err, row) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.json({user: row});
+            }
+        });
+    });
+});
+
 User.post('/Messages/:id', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
         const Message = {
             Message: req.body.Message,
             id_receiver : req.body.Receiver
         }
-        connection.query(`INSERT INTO message (id_emmiter,id_receiver,Message,created_at) values ('${authdata.row[0].ID_USER}','${Message.id_receiver}','${Message.Message}',CURRENT_TIMESTAMP())`, (err, row, fields) => {
+        const sql = `INSERT INTO message
+                    (id_emmiter,id_receiver,Message,created_at)
+                    values
+                    ('${authdata.row[0].ID_USER}','${Message.id_receiver}','${Message.Message}',CURRENT_TIMESTAMP())` ;
+        connection.query(sql, (err, row, fields) => {
             if (err) {
                 console.log(err);
             } else {
@@ -23,7 +40,8 @@ User.post('/Messages/:id', (req, res) => {
 
 User.get('/Messages', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
-        connection.query(`SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}' and STATUS = '1'`, (err, row) => {
+        const sql =  `SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}' and STATUS = '1'` ;
+        connection.query(sql, (err, row) => {
             if (err) {
                 console.log(err);
             } else {
@@ -35,7 +53,8 @@ User.get('/Messages', (req, res) => {
 
 User.delete('/Messages/:id', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
-        connection.query(`SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}'`, (err, row) => {
+        const sql = `SELECT * FROM MESSAGE WHERE ID_EMMITER = '${authdata.row[0].ID_USER}' or ID_RECEIVER = '${authdata.row[0].ID_USER}'` ;
+        connection.query(sql, (err, row) => {
             if (err) {
                 console.log(err);
             } else {
