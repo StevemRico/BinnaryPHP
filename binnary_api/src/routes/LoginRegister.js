@@ -20,7 +20,7 @@ UsersLR.post("/Login", (req, res) => {
                         if (err) {
                             throw err;
                         } else {
-                            connection.query(`UPDATE users SET DATE_LOGIN = CURRENT_TIMESTAMP() where username = '${userdata.username}' and password = '${userdata.password}'`,
+                            connection.query(`UPDATE users SET login_date = CURRENT_TIMESTAMP() where username = '${userdata.username}' and password = '${userdata.password}'`,
                                 function (err, row, field) {
                                     if (err) {
                                         console.log(err);
@@ -63,7 +63,7 @@ UsersLR.post("/Register", (req, res) => {
 
                 } else {
                     const sql = `INSERT INTO users
-                                 (Username,email,password,phone_number,profile_image,role,status,date_register)
+                                 (Username,email,password,phone_number,profile_image,role,user_status,register_date)
                                   values 
                                 ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.phone}','${ProfileDefault}','1','1',CURRENT_TIMESTAMP())`;
                     connection.query(sql,

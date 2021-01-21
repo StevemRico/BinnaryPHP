@@ -23,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./routes/LoginRegister'));
 app.use('/', verifyToken, require('./routes/Users'));
 app.use('/', verifyToken, require('./routes/Publications'));
+app.use('/', verifyToken, require('./routes/Comments'));
+app.use('/', verifyToken, require('./routes/Likes'));
+app.use('/', verifyToken, require('./routes/Messages'));
 
 // Starting the server
 app.listen(app.get('port'), () => { console.log(`Server on port ${app.get('port')}`); });
