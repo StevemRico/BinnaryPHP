@@ -30,7 +30,6 @@ Publication.get('/Publications/:id', (req, res) => {
       throw err;
     } else {
       const { id } = req.params;
-      console.log(x);
       const sql = `SELECT Publi.id_publication,user.profile_image,USER.username,File FROM publications Publi
                    INNER JOIN users USER
                    ON Publi.id_user = user.id_user

@@ -1,0 +1,22 @@
+.messages{
+    margin-top: 2%;
+    margin-left: calc(var(--sidemenu-width) + 5%);
+}
+
+.messages-sala{
+    width: 40%;
+    padding: 15px;
+}
+
+.message-sala-unique{
+    display: flex;
+    align-items: center;
+    background: whitesmoke;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.messages-sala img{
+    max-width: 50px;
+}

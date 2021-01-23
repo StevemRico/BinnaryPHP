@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import RegisterPost from '../services/Register.service';
+import '../assets/loginRegister.css';
 
 export default function Register() {
 

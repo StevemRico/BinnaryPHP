@@ -1,0 +1,28 @@
+nav {
+    background: var(--header-bg);
+    width: 100%;
+    height: var(--header-height);
+    max-height: var(--header-height);
+  }
+  
+  .logo{
+    text-align: center;
+    padding: 10px 60px;
+    color: white;
+    font-size: 35px;
+    line-height: var(--header-height);
+    font-weight: bold;
+  }
+  .header-menu {
+    float: right;
+    margin-right: 30px;
+    max-height: var(--header-height);
+    height: var(--header-height);
+  }
+  .LoginRegisterHeader{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    top: 23px;
+  }

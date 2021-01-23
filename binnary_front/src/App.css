@@ -1,3 +1,7 @@
+body{
+  background: #ebe7dd;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,201 +22,17 @@
   --font-size-min: ;
 
   --header-height: 80px;
-}
+  --sidemenu-width: 50px;
 
-/* HEADER */
-
-nav {
-  background: var(--header-bg);
-  width: 100%;
-  height: var(--header-height);
-  max-height: var(--header-height);
 }
-label.logo {
-  color: white;
-  font-size: 35px;
-  line-height: var(--header-height);
-  padding: 0 40px;
-  font-weight: bold;
-}
-.header-menu {
-  float: right;
-  margin-right: 30px;
-  max-height: var(--header-height);
-  height: var(--header-height);
-  /* background: #000; */
-}
-.LoginRegisterHeader{
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  position: relative;
-  top: 23px;
-}
-.user-header img {
-  width: 7.5%;
-}
-.header-menu-img {
-  margin-top: 14px;
-  max-height: var(--header-height);
-  max-width: var(--header-height);
-  /* background: #000; */
-  border-radius: 50%;
-}
-.imgprofileheader {
-  max-width: 50px;
-}
-.header-dropdown-content {
-  display: none;
-  position: absolute;
-  right: 20px;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.header-dropdown-content p{
-  padding: 12px 16px;
-}
-.header-menu:hover .header-dropdown-content {
-  display: block;
-}
-
-.header-dropdown-content p:hover{
-  background: #000;
-}
-/* HEADER */
-
-/* FOOTER */
-/* FOOTER */
-
-/* LOGIN - REGISTER */
-
-.grid-loginRegister {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 320px;
-  height: calc(100vh - 40px - var(--header-height));
-  /* background: #000; */
-}
-
-.container-loginRegister {
-  min-width: 310px;
-  border: 0.5px solid gray;
-  border-radius: 9px;
-  /* background: #000; */
-}
-.keypad-loginRegister {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  text-align: center;
-}
-
-.keypad-loginRegister .LoginRegister {
-  padding: 0.5em 0;
-  color: black;
-  text-decoration: none;
-  font-size: 1.3em;
-}
-
-.FormLogin {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  border-top: 0.5px solid gray;
-  padding: 0.5em;
-}
-
-.FormLogin input {
-  margin-bottom: 1%;
-  padding: 0.5em;
-  border: none;
-  border-bottom: 0.5px solid gray;
-}
-
-.FormLogin h5 {
-  color: gray;
-  padding: 0.3em;
-}
-
-.FormLogin button {
-  padding: 0.7em;
-  border: none;
-}
-
-.FormRegister {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  border-top: 0.5px solid gray;
-  padding: 0.5em;
-}
-
-.FormRegister input {
-  margin-bottom: 1%;
-  padding: 0.5em;
-  border: none;
-  border-bottom: 0.5px solid gray;
-}
-
-.FormRegister h5 {
-  color: gray;
-  padding: 0.3em;
-}
-
-.FormRegister button {
-  padding: 0.7em;
-  border: none;
-}
-
-/* LOGIN - REGISTER */
 
 /* HOME */
 
 .container-home {
   padding: 2%;
-  display: flex;
-  justify-content: center;
 }
 
 /* HOME */
-
-/* PUBLICATIONS */
-
-.grid-publication {
-  width: 60%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-publication-unique {
-  width: 95%;
-  /* border: 1px solid black; */
-  margin-bottom: 2%;
-}
-
-.publicationimg {
-  width: 99.5%;
-  max-height: 600px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.publication-profile {
-  border: 1px solid black;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  height: 80px;
-}
-
-.publication-profile img {
-  width: 20%;
-}
-.publication-profile label {
-}
-
-/* PUBLICATIONS */
 
 @media screen and (max-width: 425px) {
   .grid-publication {

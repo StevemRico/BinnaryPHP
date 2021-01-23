@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {url} from '../assets/env';
 import axios from 'axios';
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import '../assets/loginRegister.css';
 
 export default function Login() {
     const [Token, setToken] = useLocalStorage('token', '');

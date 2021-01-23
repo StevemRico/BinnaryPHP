@@ -62,10 +62,8 @@ UsersLR.post("/Register", (req, res) => {
                     }
 
                 } else {
-                    const sql = `INSERT INTO users
-                                 (Username,email,password,phone_number,profile_image,role,user_status,register_date)
-                                  values 
-                                ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.phone}','${ProfileDefault}','1','1',CURRENT_TIMESTAMP())`;
+                    const sql = `INSERT INTO users (Username,email,password,phone_number,profile_image,role,user_status) values 
+                                ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.phone}','${ProfileDefault}','1','1')`;
                     connection.query(sql,
                         function (err, rows, fields) {
                             if (err) {

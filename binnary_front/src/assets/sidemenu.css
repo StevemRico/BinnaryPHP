@@ -1,0 +1,167 @@
+.sidemenu-menu-expanded {
+  /* display: none; */
+  background: var(--header-bg);
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  top: 0;
+  left: 0;
+  transition: width .5s;
+}
+
+.sidemenu-menu-expanded .sidemenu-btn {
+  padding: 0 calc(var(--sidemenu-width) - 148px);
+}
+
+.sidemenu-menu-expanded .sidemenu-btn {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  width: 45px;
+  cursor: pointer;
+}
+
+.sidemenu-menu-expanded .sidemenu-header {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 35px;
+  line-height: var(--header-height);
+  padding: 0 40px;
+  font-weight: bold;
+  margin-top: -10px;
+  transition: color .3s;
+}
+
+.sidemenu-menu-expanded .sidemenu-profile {
+  display: inline;
+  text-align: center;
+  color: #f9f9f9;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.sidemenu-menu-expanded .sidemenu-profile img {
+  width: 100%;
+}
+.sidemenu-menu-expanded .sidemenu-profile .sidemenu-username {
+  margin-bottom: 7px;
+}
+
+.sidemenu-menu-expanded .sidemenu-item {
+  display: flex;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sidemenu-menu-expanded .sidemenu-item-search {
+  display: flex;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.sidemenu-menu-expanded .sidemenu-item-search .sidemenu-item-logo {
+  margin-right: 15px;
+  margin-top: 4px;
+}
+
+.sidemenu-menu-expanded .sidemenu-item-search .sidemenu-item-text input {
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.sidemenu-menu-expanded .sidemenu-item-search .sidemenu-item-text input {
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.sidemenu-menu-expanded .sidemenu-item .sidemenu-item-logo {
+  margin-right: 45px;
+}
+
+.sidemenu-menu-expanded .sidemenu-item:hover {
+  background: #000;
+  cursor: pointer;
+}
+
+.sidemenu-menu-expanded .sidemenu-logout {
+  /* Esta propiedad debe queda abajo del sidemenu */
+}
+
+.sidemenu-menu-collapsed {
+  background: var(--header-bg);
+  position: fixed;
+  height: 100%;
+  width: 50px;
+  top: 0;
+  left: 0;
+  transition: width .5s;
+}
+
+.sidemenu-menu-collapsed .sidemenu-header {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 25px;
+  color: transparent;
+  font-size: 35px;
+  line-height: var(--header-height);
+  padding: 0 40px;
+  font-weight: bold;
+  margin-top: -10px;
+  transition: color .3s;
+}
+
+.sidemenu-menu-collapsed .sidemenu-profile {
+  display: inline;
+  text-align: center;
+  color: #f9f9f9;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.sidemenu-menu-collapsed .sidemenu-profile img {
+  width: 100%;
+}
+.sidemenu-menu-collapsed .sidemenu-profile .sidemenu-username {
+  display: none;
+}
+
+.sidemenu-menu-collapsed .sidemenu-item, .sidemenu-item-search {
+  display: flex;
+  padding: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.sidemenu-menu-collapsed .sidemenu-item-text {
+  display: none;
+}
+
+.sidemenu-menu-collapsed .sidemenu-item .sidemenu-item-logo {
+  margin-right: 45px;
+}
+
+.sidemenu-menu-collapsed .sidemenu-item:hover {
+  background: #000;
+  cursor: pointer;
+}
+
+.sidemenu-menu-collapsed .sidemenu-logout {
+  /* Esta propiedad debe queda abajo del sidemenu */
+}
+
+.sidemenu-menu-collapsed .sidemenu-btn {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  width: 45px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}

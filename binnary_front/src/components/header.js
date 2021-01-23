@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GetUser } from '../services/User.service';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { Link } from 'react-router-dom';
+import '../assets/header.css';
 
 export default function HeaderComponent() {
 
@@ -21,7 +22,7 @@ export default function HeaderComponent() {
         return (
             <>
                 <nav>
-                    <label className="logo">Binnary</label>
+                    <span className="logo">Binnary</span>
                     <div className='header-menu'>
                         <Link to='/Login' className='LoginRegisterHeader'>Login / Register</Link>
                     </div>
@@ -33,24 +34,7 @@ export default function HeaderComponent() {
         return (
             <>
                 <nav>
-                    <label className="logo">Binnary</label>
-                    <div className='header-menu'>
-                        {
-                            User.map(userA => {
-                                return (
-                                    <section key={userA.id_user} className='header-menu-img'>
-                                        <img src={userA.profile_image} alt={userA.profile_image} className='imgprofileheader' />
-                                    </section>
-                                )
-                            })
-                        }
-                        <div className="header-dropdown-content">
-                            <p onClick={Logout}>Logout</p>
-                            <p>
-                                <i class="fab fa-facebook-messenger"></i>
-                            </p>
-                        </div>
-                    </div>
+                    <span className="logo">Binnary</span>
                 </nav>
             </>
         )

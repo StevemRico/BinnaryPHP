@@ -1,7 +1,7 @@
 import axios from "axios";
 import { url } from "../assets/env";
 
-export async function GetPublication(Token) {
+export async function GetMessage(Token) {
     axios.interceptors.request.use(
         config => {
             config.headers.authorization = `Bearer ${Token}`;
@@ -11,10 +11,10 @@ export async function GetPublication(Token) {
             return Promise.reject(error);
         }
     )
-    return await axios.get(`${url}Publications`)
+    return await axios.get(`${url}Messages`)
         .then(response => {
             // console.log(response);
-            const publication = response.data;
-            return publication;
+            const message = response.data.message;
+            return message;
         })
 }
