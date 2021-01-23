@@ -28,7 +28,7 @@ export default function Register() {
             <div className='container-loginRegister'>
                 <div className='keypad-loginRegister'>
                     <Link to='/Login' className='LoginRegister'> Login </Link>
-                    <Link to='/Register' className='LoginRegister'> Regis </Link>
+                    <Link to='/Register' className='LoginRegister'> Regisdffs </Link>
                 </div>
                 <form className='FormRegister' onSubmit={handleSubmit}>
                     <input type="text" placeholder="Username" name="username" autoComplete='off' onChange={handleChange} />
