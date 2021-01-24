@@ -20,3 +20,8 @@
 .messages-sala img{
     max-width: 50px;
 }
+.chat{
+    height: 300px;
+    border:1px solid grey;
+    width: 70%;
+}
