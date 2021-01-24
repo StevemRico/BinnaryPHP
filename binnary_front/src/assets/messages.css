@@ -10,7 +10,7 @@
 
 .message-sala-unique{
     display: flex;
-    align-items: center;
+    flex:content ;
     background: whitesmoke;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -21,7 +21,9 @@
     max-width: 50px;
 }
 .chat{
-    height: 300px;
+    height: 400px;
     border:1px solid grey;
-    width: 70%;
+}
+.Send_Message{
+    height: 200px;
 }
