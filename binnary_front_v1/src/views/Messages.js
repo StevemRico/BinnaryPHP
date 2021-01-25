@@ -19,8 +19,19 @@ export default function Messages() {
     return (
         <div className='messages'>
             <div className='messages-sala'>
-                
+                <div className='Container'>
+                    <div className='heading'>
+                        Mensajes 
+                    </div>
+                    <div className='chat'>
+                        <form className='Send_Message'>
+                        <input className='message' type='text'/>
+                        <button className='send_Button' type='submit'>Enviar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+        
     )
 }
