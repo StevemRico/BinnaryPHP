@@ -7,7 +7,6 @@ const { upload } = require('../configurations/uploadImage');
 User.get('/Users/Header', (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authdata) => {
         if(authdata){
-            console.log(authdata.row[0]);
             const sql = `SELECT id_user,username,profile_image FROM users WHERE ID_USER = '${authdata.row[0].id_user}'`;
             connection.query(sql, (err, row) => {
                 if (err) {

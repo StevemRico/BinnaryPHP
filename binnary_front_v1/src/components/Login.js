@@ -1,17 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {url} from '../assets/env';
+import { url } from '../assets/env';
 import axios from 'axios';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import '../assets/loginRegister.css';
 
 export default function Login() {
     const [Token, setToken] = useLocalStorage('token', '');
-
     const [Login, setLogin] = useState({ username: '', password: '' });
-
     const handleSubmit = e => { e.preventDefault(); }
-    
+
     const handleChange = async e => {
         await setLogin({
             ...Login,
@@ -19,17 +17,16 @@ export default function Login() {
         })
     }
 
-    const Post = () => { 
-        axios.post(`${url}Login`,Login)
-        .then(response => {
-            // console.log(response.data);
-            if(response.data === 'Usuario o contraseña son incorrectas'){
-                alert('Usuario o contraseña son incorrectas');
-            }else{
-                setToken(response.data);
-                window.location.href = '/'
-            }
-        })
+    const Post = () => {
+        axios.post(`${url}Login`, Login)
+            .then(response => {
+                if (response.data === 'Usuario o contraseña son incorrectas') {
+                    alert('Usuario o contraseña son incorrectas');
+                } else {
+                    setToken(response.data);
+                    window.location.href = '/'
+                }
+            })
     }
 
     return (
