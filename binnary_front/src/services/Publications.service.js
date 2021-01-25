@@ -37,3 +37,20 @@ export async function GetUniquePublication(Token,id) {
         })
 }
 
+export async function PostPublicationS(Token,Publication){
+    axios.interceptors.request.use(
+        config => {
+            config.headers.authorization = `Bearer ${Token}`;
+            return config;
+        },
+        error => {
+            return Promise.reject(error);
+        }
+    )
+    return await axios.post(`${url}Publications`, Publication)
+        .then(response => {
+            // console.log(response);
+            const publicationunique = response.data;
+            return publicationunique;
+        })
+}

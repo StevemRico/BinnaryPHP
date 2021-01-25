@@ -13,8 +13,9 @@ export default function Profile(){
     console.log(User);
 
     return(
-        <div className=''>
-            
+        <div className='Profile'>
+            Hola
+            {/* <label>{User[0].username}</label> */}
         </div>
     )
 }

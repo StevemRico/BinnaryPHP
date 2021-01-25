@@ -39,6 +39,7 @@ export default function Sidebar() {
             {
                 User.map(userA => {
                     return (
+                        <Link to='Profile'>
                         <div className='sidemenu-profile' key={userA.id_user}>
                             <div className='sidemanu-img-profile'>
                                 <img src={userA.profile_image} alt='0' />
@@ -51,6 +52,7 @@ export default function Sidebar() {
                             <div className='sidemenu-follow'>
                             </div>
                         </div>
+                        </Link>
                     )
                 })
             }
@@ -69,14 +71,6 @@ export default function Sidebar() {
                     </div>
                     <div className='sidemenu-item-text'>
                         <span>Home</span>
-                    </div>
-                </Link>
-                <Link to='/Profile' className='sidemenu-item'>
-                    <div className='sidemenu-item-logo'>
-                        <i className="fas fa-user-alt"></i>
-                    </div>
-                    <div className='sidemenu-item-text'>
-                        <span>Profile</span>
                     </div>
                 </Link>
                 <Link to='/PostPublications' className='sidemenu-item'>
