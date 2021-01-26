@@ -12,7 +12,8 @@ Publication.get('/Publications', (req, res) => {
       const sql = `SELECT Publi.id_publication,user.profile_image,USER.username,File FROM publications Publi
                    INNER JOIN users USER
                    ON Publi.id_user = user.id_user
-                   WHERE Publi.publication_state = 1;`;
+                   WHERE Publi.publication_state = 1
+                   ORDER BY id_publication desc`;
       connection.query(sql, (err, rows) => {
         if (err) {
           throw err;
@@ -33,7 +34,7 @@ Publication.get('/Publications/:id', (req, res) => {
       const sql = `SELECT Publi.id_publication,user.profile_image,USER.username,File FROM publications Publi
                    INNER JOIN users USER
                    ON Publi.id_user = user.id_user
-                   WHERE Publi.id_publication = ${id} AND Publi.publication_state = 1;`;
+                   WHERE Publi.id_publication = ${id} AND Publi.publication_state = 1`;
       connection.query(sql, (err, row) => {
         if (err) {
           throw err;
@@ -51,7 +52,6 @@ Publication.post('/Publications', upload.single('file'), (req, res) => {
       throw err;
     } else {
       const file = 'http://localhost:3030/' + req.file.path.split('\\')[5] + '/' + req.file.path.split('\\')[6];
-      // console.log(req.file);
       const PublicationPost = {
         description: req.body.description,
         file: file

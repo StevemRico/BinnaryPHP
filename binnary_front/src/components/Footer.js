@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function FooterComponent(){
-
     return(
         <>
         <header className="footer">

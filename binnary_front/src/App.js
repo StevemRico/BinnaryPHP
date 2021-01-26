@@ -8,6 +8,9 @@ import FooterComponent from './components/Footer';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import Sidebar from './components/Sidebar';
 import Messages from './views/Messages';
+import PublicationUnique from './components/PublicationUnique';
+import Profile from './components/Profile';
+import PostPublication from './components/PostPublication';
 
 function App() {
   const [Token, setToken] = useLocalStorage('token', '');
@@ -38,6 +41,9 @@ function App() {
             <Route exact path='/Register' component={Register} />
             <Route exact path='/Messages' component={Messages} />
             <Route exact path='/Home' component={Home} />
+            <Route exact path='/Publication/:id' component={PublicationUnique} />
+            <Route exact path='/Profile' component={Profile} />
+            <Route exact path='/PostPublications' component={PostPublication} />
           </Switch>
           {/* <FooterComponent /> */}
         </BrowserRouter>

@@ -13,8 +13,8 @@ export async function GetUser(Token) {
     )
     return await axios.get(`${url}Users/Header`)
         .then(response => {
-            // console.log(response.data);
-            const user = response.data.user;
+            console.log(response.data.authdata.row);
+            const user = response.data.authdata.row;
             return user;
         })
 }
