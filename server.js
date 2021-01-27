@@ -1,9 +1,6 @@
-var express = require("express");
-var app = express();
+const express = require('express');
+const app = express();
 
-var http= require ("http").createServer(app)
-var io= require("socket.io")(http);
-
-http.listen(3000,function(){
-    console.log("Server started");
-});
+app.listen(3000,()=>{
+    console.log('server started')
+})
