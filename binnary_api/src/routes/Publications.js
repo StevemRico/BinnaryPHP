@@ -51,7 +51,8 @@ Publication.post('/Publications', upload.single('file'), (req, res) => {
     if (err) {
       throw err;
     } else {
-      const file = 'http://localhost:3030/' + req.file.path.split('\\')[5] + '/' + req.file.path.split('\\')[6];
+      const file = 'http://localhost:3030/' + req.file.path.split('\\')[6] + '/' + req.file.path.split('\\')[7];
+      console.log(req.file);
       const PublicationPost = {
         description: req.body.description,
         file: file

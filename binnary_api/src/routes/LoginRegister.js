@@ -47,7 +47,7 @@ UsersLR.post("/Register", (req, res) => {
         phone: req.body.phone
     }
 
-    connection.query(`SELECT USERNAME,EMAIL FROM users where username = '${userdata.username}' LIMIT 1`,
+    connection.query(`SELECT username,email FROM users where username = '${userdata.username}' LIMIT 1`,
         function (err, rows, fields) {
             if (err) {
                 console.log(err);
@@ -62,7 +62,7 @@ UsersLR.post("/Register", (req, res) => {
                     }
 
                 } else {
-                    const sql = `INSERT INTO users (Username,email,password,phone_number,profile_image,role,user_status) values 
+                    const sql = `INSERT INTO users (username,email,password,phone_number,profile_image,role,user_status) values 
                                 ('${userdata.username}','${userdata.email}','${userdata.password}','${userdata.phone}','${ProfileDefault}','1','1')`;
                     connection.query(sql,
                         function (err, rows, fields) {

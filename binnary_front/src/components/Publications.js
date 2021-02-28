@@ -31,13 +31,13 @@ export default function Publications() {
             modal.style.display = "none";
         }
     }
-
+    console.log(Publication);
     return (
         <div className='grid-publication'>
             {
                 Publication.map(publi => {
                     return (
-                        <Link to={{ pathname: `/Publication/${publi.id_publication}`, state: publi.id_publication }} className='grid-publication-link'>
+                        <Link to={{ pathname: `/Publication/${publi.id_publication}`, state: publi.id_publication }} key={publi.id_publication} className='grid-publication-link'>
                             <div className='grid-publication-unique' id={publi.id_publication} key={publi.id_publication}>
                                 <div className='publication-profile'>
                                     <img src={publi.profile_image} alt={publi.profile_image} />
