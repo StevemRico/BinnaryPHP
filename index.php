@@ -20,8 +20,5 @@
     require_once 'config/config.php';
     
 
-
     $app = new App();
-
-
 ?>
