@@ -61,8 +61,8 @@ class Controller{
         if($params != ''){
             $params = '?' . $params;
         }
-
-        header('Location: ' . constant('URL') .$route . $params);
+        
+        header('location: ' . constant('URL') . $route . $params);
 
     }
 }

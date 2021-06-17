@@ -2,13 +2,13 @@
 
 class SuccessMessages{
 
-    const SUCCESS_USER_REGISTER_EXIST = '1';
+    const SUCCESS_USER_SIGNUP_NEWUSER = '1';
 
     private $successList = [];
 
     public function __construct(){
         $this->successList = [
-            SuccessMessages::SUCCESS_USER_REGISTER_EXIST => 'El usuario se registró correctamente'
+            SuccessMessages::SUCCESS_USER_SIGNUP_NEWUSER => 'El usuario se registró correctamente'
         ];  
     }
 

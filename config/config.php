@@ -1,8 +1,8 @@
 <?php
 
-define('URL', 'http://localhost/binnary/');
+define('URL', 'http://localhost/binnary');
 
-define('HOST', 'localhost');
+define('HOST', '127.0.0.1');
 define('DB', 'binnary');
 define('USER', 'root');
 define('PASSWORD', "");

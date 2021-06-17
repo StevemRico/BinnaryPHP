@@ -24,7 +24,7 @@ class UserModel extends Model implements IModel{
 
     public function save(){ 
         try {
-            $query = $this->prepare('INSERT INTO users (Username,Email,Password,Phone_number,role,user_status) VALUES (:username, :email, :password, :phone_number,"1", "1")');
+            $query = $this->prepare('INSERT INTO users (Username,Email,Password,Phone_number,role,user_status) VALUES (:username, :email, :password, :phone_number, "user", "1")');
             $query->execute([
                 'username' => $this->username,
                 'email' => $this->email,
@@ -117,14 +117,48 @@ class UserModel extends Model implements IModel{
     }
 
     public function from($array){
-        // De momento yo no le veo uso, pero dejarlo para mas adelante del tutorial
-        // $this->$username = $array['username'];
+        $this->is_user = $array['id_user'];
+        $this->username = $array['username'];
+        $this->password = $array['password'];
+        $this->email = $array['email'];
+        $this->phone_number = $array['phone_number'];
+        $this->role = $array['role'];
     }
 
-    public function exists($username){
+    public function existsU($username){
         try {
-            $query = $this->prepare('SELECT username FROM users WHERE username = :username');
-            $query->execute(['usernanme' => $username] );
+            $query = $this->prepare("SELECT username FROM users WHERE username = :username");
+            $query->execute(['username' => $username] );
+            if($query->rowCount() > 0){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (PDOException $e) {
+            error_log('USERMODEL::exists->PDOException'. $e);
+            return false;
+        }
+    
+    }
+    public function existsE($email){
+        try {
+            $query = $this->prepare("SELECT email FROM users WHERE email = :email");
+            $query->execute(['email' => $email] );
+            if($query->rowCount() > 0){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (PDOException $e) {
+            error_log('USERMODEL::exists->PDOException'. $e);
+            return false;
+        }
+    }
+
+    public function existsPhoneNumber($phone_number){
+        try {
+            $query = $this->prepare("SELECT phone_number FROM users WHERE phone_number = :phone_number");
+            $query->execute(['phone_number' => $phone_number] );
             if($query->rowCount() > 0){
                 return true;
             }else{

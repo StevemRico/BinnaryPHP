@@ -25,7 +25,7 @@ require_once 'class/session.php';
 
             $this->sites = $json['sites'];
             $this->defaultSites = $json['default-sites'];
-
+            
             $this->validateSession();
         }
 
@@ -106,6 +106,7 @@ require_once 'class/session.php';
             for ($i=0; $i < sizeof($this->sites); $i++) { 
                 if($this->sites[$i]['role'] == $role){
                     $url = '/binnary/' . $this->sites[$i]['site'];
+                    error_log($url);
                     break;
                 }
             }
@@ -113,10 +114,12 @@ require_once 'class/session.php';
         }
 
         private function isAuthorized($role){
-            $currentURL =  $this->getCurrentPage();
-            $currentURL = preg_replace("/\?.*/", "", $currentURL);
+            $currentURL = $this->getCurrentPage();
+            $currentURL = preg_replace( "/\?.*/", "", $currentURL); //omitir get info
+            error_log("".$role);
+
             for($i = 0; $i < sizeof($this->sites); $i++){
-                if($currentURL == $this->sites[$i]['site'] && $this->sites[$i]['role'] == $role){
+                if($currentURL === $this->sites[$i]['site'] && $this->sites[$i]['role'] === $role){
                     return true;
                 }
             }
@@ -129,6 +132,7 @@ require_once 'class/session.php';
         }
 
         function authorizeAccess($role){
+            error_log("sessionController::authorizeAccess(): role: $role");
             switch($role){
                 case 'user':
                     $this->redirect($this->defaultSites['user'], []);
@@ -136,9 +140,9 @@ require_once 'class/session.php';
                 case 'admin':
                     $this->redirect($this->defaultSites['admin'], []);
                 break;
+                default:
             }
         }
-
         function logout(){
             $this->session->closeSession();
         }
