@@ -28,5 +28,5 @@ class Session{
     }
 
 }
-
+/*componente*/
 ?>
