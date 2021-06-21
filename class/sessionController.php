@@ -2,6 +2,8 @@
 /**
  * Controlador que también maneja las sesiones
  */
+require_once 'class/session.php';
+
 class SessionController extends Controller{
     
     private $userSession, $username, $userid, $session, $sites, $user;

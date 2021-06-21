@@ -33,7 +33,7 @@
     ],
 
     "default-sites":{
-        "user": "home",
+        "user": "signup",
         "admin": "admin"
     }
 }
