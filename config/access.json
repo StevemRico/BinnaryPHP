@@ -16,7 +16,7 @@
             "role" : "user"
         },
         {
-            "site" : "expenses", 
+            "site" : "menssages", 
             "access" : "private", 
             "role" : "user"
         },

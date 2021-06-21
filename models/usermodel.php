@@ -1,214 +1,187 @@
 <?php
 
-class UserModel extends Model implements IModel{
+    class UserModel extends Model implements IModel{
 
-    private $id_user;
-    private $username;
-    private $password;
-    private $email;
-    private $phone_number;
-    private $role;
-    private $birthday_date;
-    private $login_date;
+        private $id, $username, $password, $email, $phone, $role;
 
-    public function __construct(){ 
-        parent::__construct();
-
-        $this->username = '';
-        $this->email = '';
-        $this->phone_number = '';
-        $this->role = '';
-        $this->birthday_date = '';
-        $this->login_date = '';
-    }
-
-    public function save(){ 
-        try {
-            $query = $this->prepare('INSERT INTO users (Username,Email,Password,Phone_number,role,user_status) VALUES (:username, :email, :password, :phone_number, "user", "1")');
-            $query->execute([
-                'username' => $this->username,
-                'email' => $this->email,
-                'password' => $this->password,
-                'phone_number' => $this->phone_number
-            ]);
-
-            return true;
-        } catch (PDOException $e) {
-            error_log('USERMODEL::save->PDOException'. $e);
-            return false;
+        public function __construct(){
+            parent::__construct();
+            $this->username = '';
+            $this->password = '';
+            $this->email = '';
+            $this->phone = '';
+            $this->role = '';
         }
-    }
 
-    public function getAll(){
-        $items = [];
-        try {
-            $query = $this->query('SELECT * FROM users');
-            while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
-                $item = new UserModel();
-                $item->setId($p['id_user']);
-                $item->setUsername($p['username']);
-                $item->setEmail($p['email']);
-                $item->setPassword($p['password']);
-                $item->setPhoneNumber($p['phone_numer']);
-                $item->setRole($p['role']);
-                $item->setBirthyDate($p['birthday_date']);
-                $item->setLoginDate($p['login_date']);
-
-                array_push($items, $item);
+        public function save(){
+            try{
+                $query = $this->prepare('INSERT INTO users (username, password, role, phone_number, user_status) VALUES(:username, :password, :role, :phone, 1 )');
+                $query->execute([
+                    'username'  => $this->username, 
+                    'password'  => $this->password,
+                    'role'      => $this->role,
+                    'phone'     => $this->phone
+                    ]);
+                return true;
+            }catch(PDOException $e){
+                error_log($e);
+                return false;
             }
-            return $items;
-        } catch (PDOException $e) {
-            error_log('USERMODEL::getAll->PDOException'. $e);
         }
-    }
 
-    public function get($id){
-        try {
-            $query = $this->prepare('SELECT * FROM users WHERE id_user = :id_user');
-            $query->execute([
-                'id_user' => $id
-            ]);
+        public function getAll(){
+            $items = [];
+            try{
+                $query = $this->query('SELECT * FROM users');
 
-            $user = $query->fetch(PDO::FETCH_ASSOC);
+                while($p = $query->fetch(PDO::FETCH_ASSOC)){
+                    $item = new UserModel();
+                    $item->setId($p['id']);
+                    $item->setUsername($p['username']);
+                    $item->setPassword($p['password'], false);
+                    $item->setPhone($p['phone']);
+                    $item->setRole($p['role']);
 
-            $this->setId($user['id_user']);
-            $this->setUsername($user['username']);
-            $this->setEmail($user['email']);
-            $this->setPassword($user['password']);
-            $this->setPhoneNumber($user['phone_numer']);
-            $this->setRole($user['role']);
-            $this->setBirthyDate($user['birthday_date']);
-            $this->setLoginDate($user['login_date']);
+                    array_push($items, $item);
+                }
+                return $items;
+            }catch(PDOException $e){
+                error_log($e);
+            }
+        }
+
+        public function get($id){
+            try{
+                $query = $this->prepare('SELECT * FROM users WHERE id = :id');
+                $query->execute([ 'id' => $id]);
+                $user = $query->fetch(PDO::FETCH_ASSOC);
+    
+                $this->id = $user['id'];
+                $this->username = $user['username'];
+                $this->password = $user['password'];
+                $this->role = $user['role'];
+                $this->phone = $user['phone'];
+    
+                return $this;
+            }catch(PDOException $e){
+                error_log($e);
+                return false;
+            }
+        }
+
+        public function delete($id){
+            try{
+                $query = $this->prepare('DELETE FROM users WHERE id = :id');
+                $query->execute([ 'id' => $id]);
+                return true;
+            }catch(PDOException $e){
+                error_log($e);
+                return false;
+            }
+        }
+
+        public function update(){
+            // De momento nos toca generar la logica para hacer el cambio del email y el phone
+            try{
+                $query = $this->prepare('UPDATE users SET username = :username, password = :password, email = :email, phone_number = phone WHERE id = :id');
+                $query->execute([
+                    'id'        => $this->id,
+                    'username' => $this->username,
+                    'password' => $this->password,
+                    'email' => $this->email,
+                    'phone' => $this->phone,
+                    ]);
+                return true;
+            }catch(PDOException $e){
+                error_log($e);
+                return false;
+            }
+        }
+
+        public function from($array){
+            $this->id = $array['id'];
+            $this->username = $array['username'];
+            $this->password = $array['password'];
+            $this->role = $array['role'];
+            $this->phone = $array['phone'];
+        }
+
+        public function existsUsername($username){
+            try{
+                $query = $this->prepare('SELECT username FROM users WHERE username = :username');
+                $query->execute( ['username' => $username]);
                 
-            return $this;
-
-        } catch (PDOException $e) {
-            error_log('USERMODEL::getID->PDOException'. $e);
-        }
-    }
-
-    public function delete($id){
-        try {
-            $query = $this->prepare('DELETE FROM users WHERE id_user = :id_user');
-            $query->execute([
-                'id_user' => $id
-            ]);
-            return true;
-        } catch (PDOException $e) {
-            error_log('USERMODEL::Delete->PDOException'. $e);  
-            return false;
-        }
-    }
-
-    public function update(){
-        try {
-            $query = $this->prepare('UPDATE users SET username = :username WHERE id_user = :id_user');
-            $query->execute([
-                'id_user' => $this->id,
-                'username' => $this->username
-            ]);
-
-            return true;
-
-        } catch (PDOException $e) {
-            error_log('USERMODEL::getID->PDOException'. $e);
-            return true;
-        }
-    }
-
-    public function from($array){
-        $this->is_user = $array['id_user'];
-        $this->username = $array['username'];
-        $this->password = $array['password'];
-        $this->email = $array['email'];
-        $this->phone_number = $array['phone_number'];
-        $this->role = $array['role'];
-    }
-
-    public function existsU($username){
-        try {
-            $query = $this->prepare("SELECT username FROM users WHERE username = :username");
-            $query->execute(['username' => $username] );
-            if($query->rowCount() > 0){
-                return true;
-            }else{
+                if($query->rowCount() > 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }catch(PDOException $e){
+                echo $e;
                 return false;
             }
-        } catch (PDOException $e) {
-            error_log('USERMODEL::exists->PDOException'. $e);
-            return false;
         }
-    
-    }
-    public function existsE($email){
-        try {
-            $query = $this->prepare("SELECT email FROM users WHERE email = :email");
-            $query->execute(['email' => $email] );
-            if($query->rowCount() > 0){
-                return true;
-            }else{
+
+        public function existsEmail($email){
+            try{
+                $query = $this->prepare('SELECT email FROM users WHERE email = :email');
+                $query->execute( ['email' => $email]);
+                if($query->rowCount() > 0){ 
+                    return true;
+                }else{
+                    return false;
+                }
+            }catch(PDOException $e){
+                echo $e;
                 return false;
             }
-        } catch (PDOException $e) {
-            error_log('USERMODEL::exists->PDOException'. $e);
-            return false;
         }
-    }
 
-    public function existsPhoneNumber($phone_number){
-        try {
-            $query = $this->prepare("SELECT phone_number FROM users WHERE phone_number = :phone_number");
-            $query->execute(['phone_number' => $phone_number] );
-            if($query->rowCount() > 0){
-                return true;
-            }else{
+        public function existsPhone($phone){
+            try{
+                $query = $this->prepare('SELECT phone FROM users WHERE phone_number = :phone');
+                $query->execute( ['phone' => $phone]);
+                if($query->rowCount() > 0){ 
+                    return true;
+                }else{
+                    return false;
+                }
+            }catch(PDOException $e){
+                echo $e;
                 return false;
             }
-        } catch (PDOException $e) {
-            error_log('USERMODEL::exists->PDOException'. $e);
-            return false;
         }
-    }
 
-    public function comparePasswords($password, $id_user){
-        try {
-            $user = $this->get($id_user);
-            return password_verify($password, $user->getPassword());
-        } catch (PDOException $e) {
-            error_log('USERMODEL::comparePasswords->PDOException'. $e);
-            return false;
+        public function setId($id){ $this->id = $id; }
+        public function setUsername($username){ $this->username = $username; }
+        public function setEmail($email){ $this->email = $email; }
+        public function setPhone($phone){ $this->phone = $phone; }
+        public function setRole($role){ $this->role = $role; }
+        public function setPassword($password){
+            $this->password = $this->getHashedPassword($password); 
         }
-    }
-    
-    private function getHashedPassword($password){
-        return password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
-    }
 
-    #SET
-    public function setId($id){ $this->id_user = $id; }
-    public function setUsername($username){ $this->username = $username; }
-    public function setEmail($email){ $this->email = $email; }
-    
-    public function setPassword($password){ 
-        $this->password = $this->getHashedPassword($password); 
+        private function getHashedPassword($password){
+            return password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
+        }
+
+        function comparePasswords($current, $id_user){
+            try{
+                $user = $this->get($id_user);
+                return password_verify($current, $user->getPassword());
+                return NULL;
+            }catch(PDOException $e){
+                return NULL;
+            }
+        }
+
+        public function getId(){        return $this->id; }
+        public function getUsername(){  return$this->username; }
+        public function getPassword(){  return $this->password;}
+        public function getEmail(){     return $this->email; }
+        public function getPhone(){     return $this->phone; }
+        public function getRole(){      return $this->role; }
+
     }
-
-    public function setPhoneNumber($phone_number){ $this->phone_number = $phone_number; }
-    public function setRole($role){ $this->role = $role; }
-    public function setBirthyDate($birthday_date){ $this->birthday_date = $birthday_date; }
-    public function setLoginDate($login_date){ $this->login_date = $login_date; }
-
-    #GET
-    public function getId(){ return $this->id_user; }
-    public function getUsername(){ return $this->username; }
-    public function getEmail(){ return $this->email; }
-    public function getPassword(){ return $this->password; }
-    public function getPhoneNumber(){ return $this->phone_number; }
-    public function getRole(){ return $this->role; }
-    public function getUserStatus(){ return $this->user_status; }
-    public function getBirthyDate(){ return $this->birthday_date; }
-    public function getLoginDate(){ return $this->login_date; }
-    
-}
 
 ?>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>SignUp</title>
     <?php echo '<link href="./public/css/Login.css" rel="stylesheet" type="text/css">'; ?>
 </head>
 <body>
@@ -14,13 +14,15 @@
                     <a href="<?php echo constant('URL'); ?>" class='LoginRegister'> Iniciar Sesion </a>
                     <a href="<?php echo constant('URL'); ?>signup" class='LoginRegister'> Registrarse </a>
                 </div>
-                <div class="FormLogin">
-                    <input type="text" name="username" id="username" autocomplete="off" placeholder="Username" class='Login-Username'>
-                    <input type="password" name="password" id="password" autocomplete="off" placeholder="Password" class='Login-Password'>
+                <div class="FormRegister">
+                    <input type="text" name="username" id="username" autocomplete="off" placeholder="Username" class='Register-Username'>
+                    <input type="text" name="email" id="email" autocomplete="off" placeholder="Email" class='Register-Email'>
+                    <input type="text" name="phone" id="phone" autocomplete="off" placeholder="Phone" class='Register-Phone'>
+                    <input type="password" name="password" id="password" autocomplete="off" placeholder="Password" class='Register-Password'>
                     <?php $this->showMessages();?>
                 </div>
-                <div class="LoginSubmit">
-                    <input type="submit" value="Iniciar sesión" class="btn btn-primary"/>
+                <div class="RegisterSubmit">
+                    <input type="submit" value="Registrarse" class="btn btn-primary"/>
                 </div>
             </div>
         </form>

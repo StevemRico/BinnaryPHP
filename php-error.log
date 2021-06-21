@@ -1,96 +1,104 @@
-[17-Jun-2021 03:31:24 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:31:25 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:31:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> login
-[17-Jun-2021 03:31:25 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:31:25 Europe/Berlin] LOGINMODEL::login->success
-[17-Jun-2021 03:31:25 Europe/Berlin] sessionController::authorizeAccess(): role: user
-[17-Jun-2021 03:31:25 Europe/Berlin] http://localhost/binnary//home
-[17-Jun-2021 03:31:25 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:31:25 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:31:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> home
-[17-Jun-2021 03:31:25 Europe/Berlin] HomeController
-[17-Jun-2021 03:31:25 Europe/Berlin] HomeController->Init View HomeController
-[17-Jun-2021 03:31:25 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:31:25 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:31:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> 
-[17-Jun-2021 03:31:25 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:31:25 Europe/Berlin] Login::render -> inicio de login
-[17-Jun-2021 03:31:46 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:31:46 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:31:46 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> 
-[17-Jun-2021 03:31:46 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:31:46 Europe/Berlin] Login::render -> inicio de login
-[17-Jun-2021 03:31:48 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:31:48 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:31:48 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> login
-[17-Jun-2021 03:31:48 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:31:48 Europe/Berlin] LOGINMODEL::login->success
-[17-Jun-2021 03:31:48 Europe/Berlin] sessionController::authorizeAccess(): role: user
-[17-Jun-2021 03:31:48 Europe/Berlin] http://localhost/binnary//home
-[17-Jun-2021 03:31:48 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:31:48 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:31:48 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> home
-[17-Jun-2021 03:31:48 Europe/Berlin] HomeController
-[17-Jun-2021 03:31:48 Europe/Berlin] HomeController->Init View HomeController
-[17-Jun-2021 03:33:09 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:09 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:09 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> 
-[17-Jun-2021 03:33:09 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:33:09 Europe/Berlin] Login::render -> inicio de login
-[17-Jun-2021 03:33:11 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:11 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:11 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> login
-[17-Jun-2021 03:33:11 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:33:11 Europe/Berlin] LOGINMODEL::login->success
-[17-Jun-2021 03:33:11 Europe/Berlin] sessionController::authorizeAccess(): role: user
-[17-Jun-2021 03:33:11 Europe/Berlin] http://localhost/binnary//home
-[17-Jun-2021 03:33:11 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:11 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:11 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> home
-[17-Jun-2021 03:33:11 Europe/Berlin] HomeController
-[17-Jun-2021 03:33:11 Europe/Berlin] HomeController->Init View HomeController
-[17-Jun-2021 03:33:12 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:12 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:12 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> 
-[17-Jun-2021 03:33:12 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:33:12 Europe/Berlin] Login::render -> inicio de login
-[17-Jun-2021 03:33:17 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:17 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:17 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> login
-[17-Jun-2021 03:33:17 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:33:17 Europe/Berlin] LOGINMODEL::login->success
-[17-Jun-2021 03:33:17 Europe/Berlin] sessionController::authorizeAccess(): role: user
-[17-Jun-2021 03:33:17 Europe/Berlin] http://localhost/binnary//home
-[17-Jun-2021 03:33:17 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:17 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:17 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> home
-[17-Jun-2021 03:33:17 Europe/Berlin] HomeController
-[17-Jun-2021 03:33:17 Europe/Berlin] HomeController->Init View HomeController
-[17-Jun-2021 03:33:17 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:33:17 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:33:17 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> 
-[17-Jun-2021 03:33:17 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:33:17 Europe/Berlin] Login::render -> inicio de login
-[17-Jun-2021 03:34:21 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:34:21 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:34:21 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> login
-[17-Jun-2021 03:34:21 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:34:21 Europe/Berlin] LOGINMODEL::login->success
-[17-Jun-2021 03:34:21 Europe/Berlin] sessionController::authorizeAccess(): role: user
-[17-Jun-2021 03:34:21 Europe/Berlin] http://localhost/binnary//home
-[17-Jun-2021 03:34:21 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:34:21 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:34:21 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> home
-[17-Jun-2021 03:34:21 Europe/Berlin] HomeController
-[17-Jun-2021 03:34:21 Europe/Berlin] HomeController->Init View HomeController
-[17-Jun-2021 03:34:21 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:34:21 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:34:21 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> 
-[17-Jun-2021 03:34:21 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:34:21 Europe/Berlin] Login::render -> inicio de login
-[17-Jun-2021 03:38:51 Europe/Berlin] Inicio de la webaplication
-[17-Jun-2021 03:38:51 Europe/Berlin] SESSIONCONTROLLER::ValidateSession
-[17-Jun-2021 03:38:51 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage -> login
-[17-Jun-2021 03:38:51 Europe/Berlin] Login::construct -> inicio de login
-[17-Jun-2021 03:38:51 Europe/Berlin] LOGINMODEL::login->success
-[17-Jun-2021 03:38:51 Europe/Berlin] sessionController::authorizeAccess(): role: user
+[19-Jun-2021 21:31:00 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:00 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:01 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:01 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:01 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:01 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:02 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:02 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:02 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:02 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:03 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:03 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:03 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:03 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:04 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:04 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:04 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:04 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 21:31:05 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 21:31:05 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:07 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:07 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:08 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:08 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:08 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:08 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:09 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:09 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:09 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:09 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:09 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:09 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:09 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:09 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:09 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:09 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:12 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:12 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:14 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:14 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[19-Jun-2021 23:43:15 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[19-Jun-2021 23:43:15 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 18:50:20 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 18:50:20 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 18:50:26 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 18:50:26 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 18:50:29 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 18:50:29 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 18:51:02 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 18:51:02 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 18:51:13 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 18:51:13 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 18:51:16 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 18:51:16 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:41 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:41 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:42 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:42 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:43 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:43 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:43 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:43 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:44 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:44 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:44 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:44 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:45 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:45 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:45 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:45 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:46 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:46 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:47 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:47 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:47 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:47 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:48 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:48 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:48 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:48 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:49 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:49 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:50 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:50 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:56 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:05:56 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:05:56 Europe/Berlin] View::handleError() existsKey =>Error Prueba
+[20-Jun-2021 21:06:02 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:06:02 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:06:38 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[20-Jun-2021 21:06:38 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[20-Jun-2021 21:06:38 Europe/Berlin] View::handleError() existsKey =>Usuario y contraseña son incorrectos
+[21-Jun-2021 03:40:03 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[21-Jun-2021 03:40:03 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[21-Jun-2021 03:40:04 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[21-Jun-2021 03:40:04 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[21-Jun-2021 03:40:04 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[21-Jun-2021 03:40:04 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[21-Jun-2021 03:40:05 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[21-Jun-2021 03:40:05 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[21-Jun-2021 03:40:06 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[21-Jun-2021 03:40:06 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login
+[21-Jun-2021 03:40:06 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[21-Jun-2021 03:40:06 Europe/Berlin] Binnary/controllers/loginController.php/__construct/ Line 7 -> Inicio del Login

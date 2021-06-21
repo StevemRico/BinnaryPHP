@@ -1,3 +1,63 @@
-.user-txt{
-    background: #000;
+.parent {
+  margin-top: 12%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+    
+.keypad-LoginRegister { grid-area: 1 / 2 / 2 / 5; }
+.FormLogin { grid-area: 2 / 2 / 5 / 5; }
+.LoginSubmit { grid-area: 5 / 2 / 6 / 5; }
+.FormRegister { grid-area: 2 / 2 / 5 / 5; }
+.RegisterSubmit { grid-area: 5 / 2 / 6 / 5; }
+
+.keypad-loginRegister {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+}
+  
+.keypad-loginRegister .LoginRegister {
+  padding: 0.5em 0;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.FormLogin {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  border-top: 0.5px solid gray;
+  padding: 0.5em;
+}
+  
+.FormLogin input {
+  margin-bottom: 1%;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 0.5px solid gray;
+}
+
+.LoginSubmit input {
+  width: 100%;
+}
+  
+.FormRegister {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  border-top: 0.5px solid gray;
+  padding: 0.5em;
+}
+  
+.FormRegister input {
+  margin-bottom: 1%;
+  padding: 0.5em;
+  border: none;
+  border-bottom: 0.5px solid gray;
+}
+
+.RegisterSubmit input {
+  width: 100%;
 }

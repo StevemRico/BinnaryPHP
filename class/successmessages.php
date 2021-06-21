@@ -1,28 +1,33 @@
 <?php
 
 class SuccessMessages{
+    //ERROR|SUCCESS
+    //Controller
+    //method
+    //operation
+    
+    //const ERROR_ADMIN_NEWCATEGORY_EXISTS = "El nombre de la categoría ya existe, intenta otra";
+    const SUCCESS_PRUEBA        = "1";
 
-    const SUCCESS_USER_SIGNUP_NEWUSER = '1';
 
     private $successList = [];
 
     public function __construct(){
         $this->successList = [
-            SuccessMessages::SUCCESS_USER_SIGNUP_NEWUSER => 'El usuario se registró correctamente'
-        ];  
+            SuccessMessages::SUCCESS_PRUEBA => 'Success Prueba',
+        ];
     }
 
-    public function get($hash){
+    function get($hash){
         return $this->successList[$hash];
     }
 
-    public function existsKey($key){
+    function existsKey($key){
         if(array_key_exists($key, $this->successList)){
-            return TRUE;
+            return true;
         }else{
-            return FALSE;
+            return false;
         }
     }
 }
-
 ?>

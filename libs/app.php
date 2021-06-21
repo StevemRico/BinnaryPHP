@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/errores.php';
+require_once 'controllers/erroresController.php';
 
 class App{
 
@@ -7,32 +7,23 @@ class App{
 
         $url = isset($_GET['url']) ? $_GET['url']: null;
         $url = rtrim($url, '/');
-        //var_dump($url);
-        /*
-            controlador->[0]
-            metodo->[1]
-            parameter->[2]
-        */
+        /* controlador->[0] metodo->[1] parameter->[2] */ 
         $url = explode('/', $url);
-
         // cuando se ingresa sin definir controlador
         if(empty($url[0])){
-            $archivoController = 'controllers/login.php';
+            $archivoController = 'controllers/loginController.php';
             require_once $archivoController;
             $controller = new Login();
             $controller->loadModel('login');
-            $controller->render();
             return false;
         }
-        $archivoController = 'controllers/' . $url[0] . '.php';
+        $archivoController = 'controllers/' . $url[0] . 'Controller.php';
 
         if(file_exists($archivoController)){
             require_once $archivoController;
-
             // inicializar controlador
             $controller = new $url[0];
             $controller->loadModel($url[0]);
-
             // si hay un método que se requiere cargar
             if(isset($url[1])){
                 if(method_exists($controller, $url[1])){
@@ -52,17 +43,13 @@ class App{
                         $controller->{$url[1]}();    
                     }
                 }else{
-                    $controller = new Errores();
-                    $controller->loadModel('errores');
-                    $controller->render();
+                    $controller = new Errores(); 
                 }
             }else{
                 $controller->render();
             }
         }else{
             $controller = new Errores();
-            $controller->loadModel('errores');
-            $controller->render();
         }
     }
 }

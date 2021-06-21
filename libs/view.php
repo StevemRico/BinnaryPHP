@@ -12,11 +12,12 @@ class View{
         $this->handleMessages();
 
         require 'views/' . $nombre . '.php';
+
     }
 
     private function handleMessages(){
         if(isset($_GET['success']) && isset($_GET['error'])){
-            //error
+            // no se muestra nada porque no puede haber un error y success al mismo tiempo
         }else if(isset($_GET['success'])){
             $this->handleSuccess();
         }else if(isset($_GET['error'])){
@@ -25,29 +26,40 @@ class View{
     }
 
     private function handleError(){
-        $hash = $_GET['error'];
-        $error = new ErrorMessages();
+        if(isset($_GET['error'])){
+            $hash = $_GET['error'];
+            $errors = new ErrorsMessages();
 
-        if($error->existsKey($hash)){
-            $this->d['error'] = $error->get($hash);
+            if($errors->existsKey($hash)){
+                error_log('View::handleError() existsKey =>' . $errors->get($hash));
+                $this->d['error'] = $errors->get($hash);
+            }else{
+                $this->d['error'] = NULL;
+            }
         }
     }
 
-    private function handleSuccess(){
-        $hash = $_GET['success'];
-        $success = new SuccessMessages();
 
-        if($success->existsKey($hash)){
-            $this->d['success'] = $success->get($hash);
+    private function handleSuccess(){
+        if(isset($_GET['success'])){
+            $hash = $_GET['success'];
+            $success = new SuccessMessages();
+
+            if($success->existsKey($hash)){
+                error_log('View::handleError() existsKey =>' . $success->existsKey($hash));
+                $this->d['success'] = $success->get($hash);
+            }else{
+                $this->d['success'] = NULL;
+            }
         }
     }
 
     public function showMessages(){
-        $this->showErrors();
+        $this->showError();
         $this->showSuccess();
     }
-    
-    public function showErrors(){
+
+    public function showError(){
         if(array_key_exists('error', $this->d)){
             echo '<div class="error">'.$this->d['error'].'</div>';
         }
@@ -58,6 +70,7 @@ class View{
             echo '<div class="success">'.$this->d['success'].'</div>';
         }
     }
+
 }
 
 ?>

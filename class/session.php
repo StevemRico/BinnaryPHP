@@ -5,7 +5,7 @@ class Session{
     private $sessionName = 'user';
 
     public function __construct(){
-        if(session_status() == PHP_SESSION_NONE){
+        if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
     }
@@ -15,7 +15,7 @@ class Session{
     }
 
     public function getCurrentUser(){
-        return $this->$_SESSION[$this->sessionName];
+        return $_SESSION[$this->sessionName];
     }
 
     public function closeSession(){
@@ -26,7 +26,6 @@ class Session{
     public function exists(){
         return isset($_SESSION[$this->sessionName]);
     }
-
 }
 
 ?>

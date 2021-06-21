@@ -7,7 +7,6 @@
     <title>Error 404</title>
 </head>
 <body>
-    <h1>404 Error</h1>
-    <p>     <?php  $this->showMessages(); ?>    </p>
+    <h1>Error 404</h1>
 </body>
 </html>
