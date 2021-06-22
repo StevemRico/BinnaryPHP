@@ -46,6 +46,7 @@ class SessionController extends Controller{
         error_log('SessionController::validateSession()');
         //Si existe la sesión
         if($this->existsSession()){
+            error_log("SessionController::validateSession -> existe la session");
             $role = $this->getUserSessionData()->getRole();
 
             error_log("sessionController::validateSession(): username:" . $this->user->getUsername() . " - role: " . $this->user->getRole());
@@ -65,6 +66,7 @@ class SessionController extends Controller{
                 }
             }
         }else{
+            error_log("SessionController::validateSession -> la session no existe");
             //No existe ninguna sesión
             //se valida si el acceso es público o no
             if($this->isPublic()){
@@ -84,10 +86,16 @@ class SessionController extends Controller{
      * si es verdadero regresa el usuario actual
      */
     function existsSession(){
-        if(!$this->session->exists()) return false;
-        if($this->session->getCurrentUser() == NULL) return false;
+        error_log("SessionController::existSession -> Funcion Exist");
+        if(!$this->session->exists()){
+            return false;  
+        }else if($this->session->getCurrentUser() == NULL){
+            return false;  
+        }
         $userid = $this->session->getCurrentUser();
-        if($userid) return true;
+        if($userid){
+            return true;
+        }
         return false;
     }
 
@@ -100,7 +108,7 @@ class SessionController extends Controller{
     }
 
     public function initialize($user){
-        error_log("sessionController::initialize(): user: " . $user->getUsername());
+        error_log("sessionController::initialize(): user: " . $user->getUsername() . " id: " . $user->getId());
         $this->session->setCurrentUser($user->getId());
         $this->authorizeAccess($user->getRole());
     }
@@ -153,10 +161,14 @@ class SessionController extends Controller{
         error_log("sessionController::authorizeAccess(): role: $role");
         switch($role){
             case 'user':
-                $this->redirect($this->defaultSites['user'], []);
-            break;
-            case 'admin':
-                $this->redirect($this->defaultSites['admin'], []);
+                // $this->redirect($this->defaultSites['user']);
+                error_log("SessionController::authorizeAccess -> switch case user");
+                header('location: '. constant('URL') . 'home');
+                break;
+                case 'admin':
+                    // $this->redirect($this->defaultSites['admin']);
+                    error_log("SessionController::authorizeAccess -> switch case admin /n");
+                header('location: '. constant('URL') . 'admin');
             break;
             default:
         }

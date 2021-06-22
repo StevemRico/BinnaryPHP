@@ -37,7 +37,7 @@
 
                 while($p = $query->fetch(PDO::FETCH_ASSOC)){
                     $item = new UserModel();
-                    $item->setId($p['id']);
+                    $item->setId($p['id_user']);
                     $item->setUsername($p['username']);
                     $item->setPassword($p['password'], false);
                     $item->setPhone($p['phone']);
@@ -53,15 +53,15 @@
 
         public function get($id){
             try{
-                $query = $this->prepare('SELECT * FROM users WHERE id = :id');
+                $query = $this->prepare('SELECT * FROM users WHERE id_user = :id');
                 $query->execute([ 'id' => $id]);
                 $user = $query->fetch(PDO::FETCH_ASSOC);
     
-                $this->id = $user['id'];
+                $this->id = $user['id_user'];
                 $this->username = $user['username'];
                 $this->password = $user['password'];
                 $this->role = $user['role'];
-                $this->phone = $user['phone'];
+                $this->phone = $user['phone_number'];
     
                 return $this;
             }catch(PDOException $e){
@@ -72,7 +72,7 @@
 
         public function delete($id){
             try{
-                $query = $this->prepare('DELETE FROM users WHERE id = :id');
+                $query = $this->prepare('DELETE FROM users WHERE id_user = :id');
                 $query->execute([ 'id' => $id]);
                 return true;
             }catch(PDOException $e){
@@ -84,7 +84,7 @@
         public function update(){
             // De momento nos toca generar la logica para hacer el cambio del email y el phone
             try{
-                $query = $this->prepare('UPDATE users SET username = :username, password = :password, email = :email, phone_number = phone WHERE id = :id');
+                $query = $this->prepare('UPDATE users SET username = :username, password = :password, email = :email, phone_number = phone WHERE id_user = :id');
                 $query->execute([
                     'id'        => $this->id,
                     'username' => $this->username,
@@ -100,11 +100,11 @@
         }
 
         public function from($array){
-            $this->id = $array['id'];
+            $this->id = $array['id_user'];
             $this->username = $array['username'];
             $this->password = $array['password'];
             $this->role = $array['role'];
-            $this->phone = $array['phone'];
+            $this->phone = $array['phone_number'];
         }
 
         public function existsUsername($username){
@@ -158,8 +158,12 @@
         public function setEmail($email){ $this->email = $email; }
         public function setPhone($phone){ $this->phone = $phone; }
         public function setRole($role){ $this->role = $role; }
-        public function setPassword($password){
-            $this->password = $this->getHashedPassword($password); 
+        public function setPassword($password, $hash = true){ 
+            if($hash){
+                $this->password = $this->getHashedPassword($password);
+            }else{
+                $this->password = $password;
+            }
         }
 
         private function getHashedPassword($password){
@@ -177,7 +181,7 @@
         }
 
         public function getId(){        return $this->id; }
-        public function getUsername(){  return$this->username; }
+        public function getUsername(){  return $this->username; }
         public function getPassword(){  return $this->password;}
         public function getEmail(){     return $this->email; }
         public function getPhone(){     return $this->phone; }

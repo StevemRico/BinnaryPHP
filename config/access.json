@@ -16,7 +16,7 @@
             "role" : "user"
         },
         {
-            "site" : "menssages", 
+            "site" : "messages", 
             "access" : "private", 
             "role" : "user"
         },
@@ -33,7 +33,7 @@
     ],
 
     "default-sites":{
-        "user": "signup",
+        "user": "home",
         "admin": "admin"
     }
 }

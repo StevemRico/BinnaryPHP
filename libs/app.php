@@ -7,23 +7,32 @@ class App{
 
         $url = isset($_GET['url']) ? $_GET['url']: null;
         $url = rtrim($url, '/');
-        /* controlador->[0] metodo->[1] parameter->[2] */ 
+        //var_dump($url);
+        /*
+            controlador->[0]
+            metodo->[1]
+            parameter->[2]
+        */
         $url = explode('/', $url);
+
         // cuando se ingresa sin definir controlador
         if(empty($url[0])){
             $archivoController = 'controllers/loginController.php';
             require_once $archivoController;
             $controller = new Login();
             $controller->loadModel('login');
+            $controller->render();
             return false;
         }
         $archivoController = 'controllers/' . $url[0] . 'Controller.php';
 
         if(file_exists($archivoController)){
             require_once $archivoController;
+
             // inicializar controlador
             $controller = new $url[0];
             $controller->loadModel($url[0]);
+
             // si hay un método que se requiere cargar
             if(isset($url[1])){
                 if(method_exists($controller, $url[1])){

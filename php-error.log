@@ -1,15 +1,10 @@
-[22-Jun-2021 02:28:50 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
-[22-Jun-2021 02:28:50 Europe/Berlin] SessionController::validateSession()
-[22-Jun-2021 02:28:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
-[22-Jun-2021 02:28:50 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[22-Jun-2021 02:28:50 Europe/Berlin] SessionController::validateSession() public page
-[22-Jun-2021 02:28:51 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
-[22-Jun-2021 02:28:51 Europe/Berlin] SessionController::validateSession()
-[22-Jun-2021 02:28:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
-[22-Jun-2021 02:28:51 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[22-Jun-2021 02:28:51 Europe/Berlin] SessionController::validateSession() public page
-[22-Jun-2021 02:29:25 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
-[22-Jun-2021 02:29:25 Europe/Berlin] SessionController::validateSession()
-[22-Jun-2021 02:29:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
-[22-Jun-2021 02:29:25 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[22-Jun-2021 02:29:25 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 04:58:39 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::validateSession -> existe la session
+[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::getUserSessionData(): Stevemrico
+[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::validateSession(): username:Stevemrico - role: user
+[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::isPublic(): currentURL => home
+[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar

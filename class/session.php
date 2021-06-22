@@ -1,3 +1,4 @@
+  
 <?php
 
 class Session{
@@ -12,6 +13,7 @@ class Session{
 
     public function setCurrentUser($user){
         $_SESSION[$this->sessionName] = $user;
+        error_log("SessionClass::setCurrentUser ->". $user);
     }
 
     public function getCurrentUser(){
@@ -27,5 +29,5 @@ class Session{
         return isset($_SESSION[$this->sessionName]);
     }
 }
-/*componente*/
+
 ?>

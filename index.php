@@ -23,6 +23,8 @@ require_once 'libs/app.php';
 
 require_once 'config/config.php';
 
+include_once 'models/usermodel.php';
+
 
 
 $app = new App();
