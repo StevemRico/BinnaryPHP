@@ -1,7 +1,5 @@
 <?php
-/**
- * Controlador que también maneja las sesiones
- */
+
 require_once 'class/session.php';
 
 class SessionController extends Controller{
@@ -18,21 +16,13 @@ class SessionController extends Controller{
     public function getUsername(){ return $this->username; }
     public function getUserId(){ return $this->userid; }
 
-    /** Inicializa el parser para leer el .json */
     private function init(){
-        //se crea nueva sesión
         $this->session = new Session();
-        //se carga el archivo json con la configuración de acceso
         $json = $this->getJSONFileConfig();
-        // se asignan los sitios
         $this->sites = $json['sites'];
-        // se asignan los sitios por default, los que cualquier rol tiene acceso
         $this->defaultSites = $json['default-sites'];
-        // inicia el flujo de validación para determinar
-        // el tipo de rol y permismos
         $this->validateSession();
     }
-    /** * Abre el archivo JSON y regresa el resultado decodificado */
     private function getJSONFileConfig(){
         $string = file_get_contents("config/access.json");
         $json = json_decode($string, true);
@@ -40,11 +30,9 @@ class SessionController extends Controller{
         return $json;
     }
 
-    /** * Implementa el flujo de autorización * para entrar a las páginas */
 
     function validateSession(){
         error_log('SessionController::validateSession()');
-        //Si existe la sesión
         if($this->existsSession()){
             error_log("SessionController::validateSession -> existe la session");
             $role = $this->getUserSessionData()->getRole();
@@ -56,35 +44,22 @@ class SessionController extends Controller{
             }else{
                 if($this->isAuthorized($role)){
                     error_log( "SessionController::validateSession() => autorizado, lo deja pasar" );
-                    //si el usuario está en una página de acuerdo
-                    // a sus permisos termina el flujo
                 }else{
                     error_log( "SessionController::validateSession() => no autorizado, redirige al main de cada rol" );
-                    // si el usuario no tiene permiso para estar en
-                    // esa página lo redirije a la página de inicio
                     $this->redirectDefaultSiteByRole($role);
                 }
             }
         }else{
             error_log("SessionController::validateSession -> la session no existe");
-            //No existe ninguna sesión
-            //se valida si el acceso es público o no
             if($this->isPublic()){
                 error_log('SessionController::validateSession() public page');
-                //la pagina es publica
-                //no pasa nada
             }else{
-                //la página no es pública
-                //redirect al login
                 error_log('SessionController::validateSession() redirect al login');
                 header('location: '. constant('URL') . '');
             }
         }
     }
-    /**
-     * Valida si existe sesión, 
-     * si es verdadero regresa el usuario actual
-     */
+    
     function existsSession(){
         error_log("SessionController::existSession -> Funcion Exist");
         if(!$this->session->exists()){
@@ -161,14 +136,10 @@ class SessionController extends Controller{
         error_log("sessionController::authorizeAccess(): role: $role");
         switch($role){
             case 'user':
-                // $this->redirect($this->defaultSites['user']);
-                error_log("SessionController::authorizeAccess -> switch case user");
-                header('location: '. constant('URL') . 'home');
-                break;
-                case 'admin':
-                    // $this->redirect($this->defaultSites['admin']);
-                    error_log("SessionController::authorizeAccess -> switch case admin /n");
-                header('location: '. constant('URL') . 'admin');
+                $this->redirect($this->defaultSites['user']);
+            break;
+            case 'admin':
+                    $this->redirect($this->defaultSites['admin']);
             break;
             default:
         }

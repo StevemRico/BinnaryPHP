@@ -1,12 +1,7 @@
 <?php
 
 class ErrorsMessages{
-    //ERROR|SUCCESS
-    //Controller
-    //method
-    //operation
     
-    //const ERROR_ADMIN_NEWCATEGORY_EXISTS = "El nombre de la categoría ya existe, intenta otra";
     const ERROR_PRUEBA        = "1";
     const ERR_SIGNUP_NEWUSER_EMPTY        = "2";
     const ERR_SIGNUP_USERNAME_EXISTS        = "3";

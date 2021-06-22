@@ -1,10 +1,178 @@
-[22-Jun-2021 04:58:39 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
-[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::validateSession()
-[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::existSession -> Funcion Exist
-[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::validateSession -> existe la session
-[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::getUserSessionData(): Stevemrico
-[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::validateSession(): username:Stevemrico - role: user
-[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
-[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::isPublic(): currentURL => home
-[22-Jun-2021 04:58:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
-[22-Jun-2021 04:58:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[22-Jun-2021 05:05:19 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:05:19 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:05:19 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:05:19 Europe/Berlin] SessionController::validateSession -> existe la session
+[22-Jun-2021 05:05:19 Europe/Berlin] sessionController::getUserSessionData(): Stevemrico
+[22-Jun-2021 05:05:19 Europe/Berlin] sessionController::validateSession(): username:Stevemrico - role: user
+[22-Jun-2021 05:05:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 05:05:19 Europe/Berlin] sessionController::isPublic(): currentURL => home
+[22-Jun-2021 05:05:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 05:05:19 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[22-Jun-2021 05:05:22 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:06:16 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:06:22 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:06:31 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:07:15 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:07:17 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:07:33 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:07:42 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:07:59 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:08:28 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:08:49 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:08:51 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:09:05 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:09:17 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:11:59 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:13:19 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:13:20 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:13:51 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:15:08 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:15:29 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:15:37 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:16:07 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:16:21 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:16:40 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:16:40 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:16:40 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:16:40 Europe/Berlin] SessionController::validateSession -> existe la session
+[22-Jun-2021 05:16:40 Europe/Berlin] sessionController::getUserSessionData(): Stevemrico
+[22-Jun-2021 05:16:40 Europe/Berlin] sessionController::validateSession(): username:Stevemrico - role: user
+[22-Jun-2021 05:16:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
+[22-Jun-2021 05:16:40 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[22-Jun-2021 05:16:40 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[22-Jun-2021 05:16:41 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:16:41 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:16:41 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:16:41 Europe/Berlin] SessionController::validateSession -> existe la session
+[22-Jun-2021 05:16:41 Europe/Berlin] sessionController::getUserSessionData(): Stevemrico
+[22-Jun-2021 05:16:41 Europe/Berlin] sessionController::validateSession(): username:Stevemrico - role: user
+[22-Jun-2021 05:16:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 05:16:41 Europe/Berlin] sessionController::isPublic(): currentURL => home
+[22-Jun-2021 05:16:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 05:16:41 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[22-Jun-2021 05:16:59 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:16:59 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:16:59 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:16:59 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:16:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
+[22-Jun-2021 05:16:59 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[22-Jun-2021 05:16:59 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:17:07 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:07 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:07 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:07 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:17:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup, url => signup
+[22-Jun-2021 05:17:07 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:17:07 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:17:09 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:09 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:09 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:09 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:17:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
+[22-Jun-2021 05:17:09 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[22-Jun-2021 05:17:09 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:17:11 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:11 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:11 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:11 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:17:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup, url => signup
+[22-Jun-2021 05:17:11 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:17:11 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:17:37 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:37 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:37 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:37 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:17:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup/newUser, url => signup
+[22-Jun-2021 05:17:37 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:17:37 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:17:38 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:38 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:38 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:38 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:17:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/?success=2, url => ?success=2
+[22-Jun-2021 05:17:38 Europe/Berlin] sessionController::isPublic(): currentURL => ?success=2
+[22-Jun-2021 05:17:38 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:17:38 Europe/Berlin] View::handleError() existsKey =>1
+[22-Jun-2021 05:17:51 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/login/authenticate, url => login
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::validateSession() redirect al login
+[22-Jun-2021 05:17:51 Europe/Berlin] login: inicio
+[22-Jun-2021 05:17:51 Europe/Berlin] login: user id 37
+[22-Jun-2021 05:17:51 Europe/Berlin] login: success
+[22-Jun-2021 05:17:51 Europe/Berlin] Login::authenticate() passed
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::initialize(): user: Julian id: 37
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionClass::setCurrentUser ->37
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::authorizeAccess(): role: user
+[22-Jun-2021 05:17:51 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::validateSession -> existe la session
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::getUserSessionData(): Julian
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::validateSession(): username:Julian - role: user
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::isPublic(): currentURL => home
+[22-Jun-2021 05:17:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/home, url => home
+[22-Jun-2021 05:17:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[22-Jun-2021 05:18:30 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:30 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:30 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:30 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/, url => 
+[22-Jun-2021 05:18:30 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[22-Jun-2021 05:18:30 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:31 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:31 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:31 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:31 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup, url => signup
+[22-Jun-2021 05:18:31 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:18:31 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:39 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:39 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:39 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:39 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup/newUser, url => signup
+[22-Jun-2021 05:18:39 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:18:39 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:40 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:40 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:40 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:40 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup?error=3, url => signup?error=3
+[22-Jun-2021 05:18:40 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=3
+[22-Jun-2021 05:18:40 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:40 Europe/Berlin] View::handleError() existsKey =>El Username ya existe
+[22-Jun-2021 05:18:48 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup/newUser, url => signup
+[22-Jun-2021 05:18:48 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:48 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup?error=5, url => signup?error=5
+[22-Jun-2021 05:18:48 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=5
+[22-Jun-2021 05:18:48 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:48 Europe/Berlin] View::handleError() existsKey =>El Phone ya existe
+[22-Jun-2021 05:18:55 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup/newUser, url => signup
+[22-Jun-2021 05:18:55 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:55 Europe/Berlin] binnary/index.php/Line 9 -> Inicio de aplicacion web
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::validateSession()
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::existSession -> Funcion Exist
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::validateSession -> la session no existe
+[22-Jun-2021 05:18:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/binnary/signup?error=4, url => signup?error=4
+[22-Jun-2021 05:18:55 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=4
+[22-Jun-2021 05:18:55 Europe/Berlin] SessionController::validateSession() public page
+[22-Jun-2021 05:18:55 Europe/Berlin] View::handleError() existsKey =>El Email ya existe
