@@ -8,6 +8,7 @@ class SuccessMessages{
     
     //const ERROR_ADMIN_NEWCATEGORY_EXISTS = "El nombre de la categoría ya existe, intenta otra";
     const SUCCESS_PRUEBA        = "1";
+    const SUCCESS_SIGNUP_NEWUSER        = "2";
 
 
     private $successList = [];
@@ -15,6 +16,7 @@ class SuccessMessages{
     public function __construct(){
         $this->successList = [
             SuccessMessages::SUCCESS_PRUEBA => 'Success Prueba',
+            SuccessMessages::SUCCESS_SIGNUP_NEWUSER => 'Usuario Registrado Corecctamente',
         ];
     }
 

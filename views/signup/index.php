@@ -8,17 +8,17 @@
     <?php echo '<link href="./public/css/Login.css" rel="stylesheet" type="text/css">'; ?>
 </head>
 <body>
-        <form action="<?php echo constant('URL'); ?>login/authenticate" method="POST">
+        <form action="<?php echo constant('URL'); ?>signup/newUser" method="POST">
             <div class="parent">
                 <div class="keypad-LoginRegister">
                     <a href="<?php echo constant('URL'); ?>" class='LoginRegister'> Iniciar Sesion </a>
                     <a href="<?php echo constant('URL'); ?>signup" class='LoginRegister'> Registrarse </a>
                 </div>
                 <div class="FormRegister">
-                    <input type="text" name="username" id="username" autocomplete="off" placeholder="Username" class='Register-Username'>
-                    <input type="text" name="email" id="email" autocomplete="off" placeholder="Email" class='Register-Email'>
-                    <input type="text" name="phone" id="phone" autocomplete="off" placeholder="Phone" class='Register-Phone'>
-                    <input type="password" name="password" id="password" autocomplete="off" placeholder="Password" class='Register-Password'>
+                    <input type="text" name="username" id="username"  placeholder="Username" class='Register-Username'>
+                    <input type="text" name="email" id="email"  placeholder="Email" class='Register-Email'>
+                    <input type="text" name="phone" id="phone"  placeholder="Phone" class='Register-Phone'>
+                    <input type="password" name="password" id="password"  placeholder="Password" class='Register-Password'>
                     <?php $this->showMessages();?>
                 </div>
                 <div class="RegisterSubmit">

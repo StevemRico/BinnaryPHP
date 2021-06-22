@@ -8,7 +8,7 @@
     <?php echo '<link href="./public/css/Login.css" rel="stylesheet" type="text/css">'; ?>
 </head>
 <body>
-        <form action="<?php echo constant('URL'); ?>login/authenticate" method="POST">
+        <form action="<?php echo constant('URL'); ?>" method="POST">
             <div class="parent">
                 <div class="keypad-LoginRegister">
                     <a href="<?php echo constant('URL'); ?>" class='LoginRegister'> Iniciar Sesion </a>

@@ -15,11 +15,12 @@
 
         public function save(){
             try{
-                $query = $this->prepare('INSERT INTO users (username, password, role, phone_number, user_status) VALUES(:username, :password, :role, :phone, 1 )');
+                $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status) VALUES(:username, :password, :role, :email, :phone, 1 )');
                 $query->execute([
                     'username'  => $this->username, 
                     'password'  => $this->password,
                     'role'      => $this->role,
+                    'email'      => $this->email,
                     'phone'     => $this->phone
                     ]);
                 return true;
@@ -139,7 +140,7 @@
 
         public function existsPhone($phone){
             try{
-                $query = $this->prepare('SELECT phone FROM users WHERE phone_number = :phone');
+                $query = $this->prepare('SELECT phone_number FROM users WHERE phone_number = :phone');
                 $query->execute( ['phone' => $phone]);
                 if($query->rowCount() > 0){ 
                     return true;
