@@ -13,7 +13,10 @@ class ErrorsMessages{
     const ERR_SIGNUP_EMAIL_EXISTS        = "4";
     const ERR_SIGNUP_PHONE_EXISTS        = "5";
     const ERR_SIGNUP_NEWUSER        = "6";
-
+    const ERR_LOGIN_AUTHENTICATE_EMPTY        = "7";
+    const ERR_LOGIN_AUTHENTICATE_DATA        = "8";
+    const ERR_LOGIN_AUTHENTICATE        = "9";
+    
 
     private $errorsList = [];
 
@@ -25,6 +28,9 @@ class ErrorsMessages{
             ErrorsMessages::ERR_SIGNUP_EMAIL_EXISTS => 'El Email ya existe',
             ErrorsMessages::ERR_SIGNUP_PHONE_EXISTS => 'El Phone ya existe',
             ErrorsMessages::ERR_SIGNUP_NEWUSER => 'Ocurrio un error en el sistema',
+            ErrorsMessages::ERR_LOGIN_AUTHENTICATE_EMPTY => 'Campos Vacios',
+            ErrorsMessages::ERR_LOGIN_AUTHENTICATE_DATA => 'Usuario y contraseña correctos',
+            ErrorsMessages::ERR_LOGIN_AUTHENTICATE => 'Ocurrio un error en el sistema Login',
         ];
     }
 
