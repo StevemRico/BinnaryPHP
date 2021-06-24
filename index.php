@@ -11,6 +11,7 @@ ini_set("error_log", "php-error.log");
 error_log( "binnary/index.php/Line 9 -> Inicio de aplicacion web" );
 
 echo '<link href="./public/css/bootstrap.min.css" rel="stylesheet" type="text/css">';
+echo '<link href="./public/css/global.css" rel="stylesheet" type="text/css">';
 
 require_once 'libs/database.php';
 require_once 'class/errorMessages.php';

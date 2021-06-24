@@ -23,6 +23,8 @@
                     'email'      => $this->email,
                     'phone'     => $this->phone
                     ]);
+                    $query2 = $this->prepare('INSERT INTO profile (register_date,fk_user) VALUES (CURRENT_TIMESTAMP,(SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1))');
+                    $query2->execute();
                 return true;
             }catch(PDOException $e){
                 error_log($e);
@@ -56,12 +58,14 @@
                 $query = $this->prepare('SELECT * FROM users WHERE id_user = :id');
                 $query->execute([ 'id' => $id]);
                 $user = $query->fetch(PDO::FETCH_ASSOC);
-    
+                
                 $this->id = $user['id_user'];
                 $this->username = $user['username'];
                 $this->password = $user['password'];
                 $this->role = $user['role'];
                 $this->phone = $user['phone_number'];
+                
+
     
                 return $this;
             }catch(PDOException $e){

@@ -26,6 +26,11 @@
             "role" : "user"
         },
         {
+            "site" : "header", 
+            "access" : "private", 
+            "role" : "user"
+        },
+        {
             "site" : "admin", 
             "access" : "private", 
             "role" : "admin"

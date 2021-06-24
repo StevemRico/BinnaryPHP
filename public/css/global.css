@@ -1,0 +1,18 @@
+:root {
+    /* #414970 #70585B #4C5270 #706541 #47704F */
+    --header-bg: #4c5270;
+    --header-bg-search: #4c5265;
+    --color-header-text: #fcfcf2;
+    --keypad-login-register-bg: #4c5270;
+    --color-keypad-login-register: #fcfcf2;
+    --color-beige: #fffff5;
+  
+    --font-size-header: 0.9em;
+    --font-size-max: ;
+    --font-size-mid: ;
+    --font-size-min: ;
+  
+    --header-height: 80px;
+    --sidemenu-width: 50px;
+  
+  }
