@@ -1,3 +1,7 @@
+<?php
+    $publications             = $this->d['publications'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <?php echo '<link href="./public/css/home.css" rel="stylesheet" type="text/css">'; ?>
+    <?php echo '<link href="./public/css/Publication.css" rel="stylesheet" type="text/css">'; ?>
 </head>
 <body>
-    <?php require './public/components/header.php'; ?>
-    <div class="home-container">
-        <h1>HOME</h1>
+    <div class="container">
+        <div class="home-container">
+            <h1>HOME</h1>
+            <div class="row">
+            <?php
+            foreach ($publications as $publication ) { ?>
+                <div class='Publication-card '>
+                    <div class='Publication-card-header'>
+                            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/logo-batman-2144613.jpg?itok=6w_ZtOfC" alt="">
+                            <label><?php echo $publication['username'] ?></label>
+                    </div>
+                    <div class='Publication-card-body'>
+                        <img src="<?php echo $publication['file'] ?>" alt='0'>
+                    </div>
+                    <div class='Publication-card-description'>
+                        <label><?php echo $publication['description'] ?></label>
+                    </div>
+                    <div class='Publication-card-Comments'>
+                        <label><?php echo $publication['description'] ?></label>
+                    </div>
+                </div>
+                <?php   } ?>
+            </div>
+        </div>
     </div>
 </body>
 </html>

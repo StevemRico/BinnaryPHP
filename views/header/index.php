@@ -3,6 +3,9 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="public/js/header.js"></script>
 
+<?php
+    $user = $this->d['user'];
+?>
 
 <nav class='nav'>
     <span class="logo">Binnary</span>
@@ -14,7 +17,21 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div class='sidemenu-items'>
-                <a to='/' class='sidemenu-item-search'>
+                <a href="" style="text-decoration: none;">
+                    <div class='sidemenu-profile'>
+                        <div class='sidemanu-img-profile'>
+                            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/logo-batman-2144613.jpg?itok=6w_ZtOfC" alt='0' />
+                        </div>
+                        <div class='sidemenu-username'>
+                            <span style="text-decoration: none;">
+                                <?php echo $user->getUsername() ?>
+                            </span>
+                        </div>
+                        <div class='sidemenu-follow'>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class='sidemenu-item-search'>
                     <div class='sidemenu-item-logo'>
                         <i class="fas fa-search"></i>
                     </div>

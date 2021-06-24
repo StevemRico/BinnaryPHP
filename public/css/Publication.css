@@ -1,0 +1,50 @@
+.Publication-card{
+    width: 40%;
+    height: auto;
+    background: #FAFAfa;
+    /* background: #000; */
+    border-radius: 2% 2%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.Publication-card-header{
+    /* display: inline; */
+    /* border: 1px solid black; */
+}
+
+.Publication-card-header img{
+    width: 10%;
+    margin-left: 20px;
+    padding: 10px 0;
+    max-height: 100px;
+}
+
+.Publication-card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.Publication-card-body img{
+    /* width: calc(var(--sidemenu-width) - 148px); */
+    width: 380px;
+    padding: 0px 10px;
+}
+.Publication-card-header label{
+    color: black;
+}
+
+.Publication-card-description{
+    /* border: 1px solid black; */
+}
+.Publication-card-description label{
+    color: black;
+}
+
+.Publication-card-Comments{
+    /* border: 1px solid black; */
+}
+.Publication-card-Comments label{
+    color: black;
+}

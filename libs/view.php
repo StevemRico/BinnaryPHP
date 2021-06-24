@@ -8,11 +8,8 @@ class View{
 
     function render($nombre, $data = []){
         $this->d = $data;
-
         $this->handleMessages();
-
         require 'views/' . $nombre . '.php';
-
     }
 
     private function handleMessages(){

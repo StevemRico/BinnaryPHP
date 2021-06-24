@@ -40,10 +40,6 @@ class Login extends SessionController{
             $this->redirect('', ['error' => ErrorsMessages::ERR_LOGIN_AUTHENTICATE]);
         }
     }
-
-    function saludo(){
-        
-    }
 }
 
 ?>
