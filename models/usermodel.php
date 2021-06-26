@@ -11,10 +11,10 @@
             $this->email = '';
             $this->phone = '';
             $this->role = '';
+            $this->picture_profile = '';
         }
 
         public function save(){
-            error_log("NSAVE???????????????????????");
             try{
                 $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status) VALUES(:username, :password, :role, :email, :phone, 1 )');
                 $query->execute([
@@ -24,7 +24,7 @@
                     'email'      => $this->email,
                     'phone'     => $this->phone
                     ]);
-                    $query2 = $this->prepare('INSERT INTO profile (register_date,fk_user) VALUES (CURRENT_TIMESTAMP,(SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1))');
+                    $query2 = $this->prepare('INSERT INTO profile (register_date,fk_user,profile_image) VALUES (CURRENT_TIMESTAMP,(SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1),"./public/img/profile/picture-profile.png")');
                     $query2->execute();
                 return true;
             }catch(PDOException $e){
@@ -56,7 +56,7 @@
 
         public function get($id){
             try{
-                $query = $this->prepare('SELECT * FROM users WHERE id_user = :id');
+                $query = $this->prepare('SELECT * FROM users INNER JOIN profile on users.id_user = profile.fk_user WHERE id_user = :id');
                 $query->execute([ 'id' => $id]);
                 $user = $query->fetch(PDO::FETCH_ASSOC);
                 
@@ -65,9 +65,10 @@
                 $this->password = $user['password'];
                 $this->role = $user['role'];
                 $this->phone = $user['phone_number'];
-                
+                $this->picture_profile = $user['profile_image'];
 
-    
+                // print_r($user);
+                
                 return $this;
             }catch(PDOException $e){
                 error_log($e);
@@ -110,6 +111,7 @@
             $this->password = $array['password'];
             $this->role = $array['role'];
             $this->phone = $array['phone_number'];
+            $this->picture_profile = $array['profile_image'];
         }
 
         public function existsUsername($username){
@@ -163,6 +165,7 @@
         public function setEmail($email){ $this->email = $email; }
         public function setPhone($phone){ $this->phone = $phone; }
         public function setRole($role){ $this->role = $role; }
+        public function setPicture($picture_profile){ $this->picture_profile = $picture_profile; }
         public function setPassword($password, $hash = true){ 
             if($hash){
                 $this->password = $this->getHashedPassword($password);
@@ -191,6 +194,7 @@
         public function getEmail(){     return $this->email; }
         public function getPhone(){     return $this->phone; }
         public function getRole(){      return $this->role; }
+        public function getPicture(){      return $this->picture_profile; }
 
     }
 

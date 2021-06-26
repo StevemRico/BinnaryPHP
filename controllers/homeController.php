@@ -17,7 +17,8 @@ class Home extends SessionController{
             'user' => $this->user
         ]);
         $this->view->render('home/index', [
-            'publications' => $publications
+            'publications' => $publications,
+            'user' => $this->user
         ]);
     }
 
@@ -35,6 +36,7 @@ class Home extends SessionController{
             $categoryArray['description'] = $publication->getDescription();
             $categoryArray['file'] = $publication->getFile();
             $categoryArray['username'] = $publication->getUsernameP();
+            $categoryArray['profile_image'] = $publication->getProfileImage();
             array_push($res, $categoryArray);
         }
         return $res;

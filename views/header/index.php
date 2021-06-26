@@ -20,12 +20,13 @@
                 <a href="" style="text-decoration: none;">
                     <div class='sidemenu-profile'>
                         <div class='sidemanu-img-profile'>
-                            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/logo-batman-2144613.jpg?itok=6w_ZtOfC" alt='0' />
+                            <!-- <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/logo-batman-2144613.jpg?itok=6w_ZtOfC" alt='0' /> -->
+                            <img src="<?php echo $user->getPicture() ?>" alt='0' />
                         </div>
                         <div class='sidemenu-username'>
                             <span style="text-decoration: none;">
                                 <?php echo $user->getUsername() ?>
-                            </span>
+                            </span>                                
                         </div>
                         <div class='sidemenu-follow'>
                         </div>

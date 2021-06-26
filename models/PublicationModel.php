@@ -2,7 +2,7 @@
 
 class PublicationModel extends Model implements IModel{
 
-    private $id_publication,$description,$file,$id_user,$username;
+    private $id_publication,$description,$file,$id_user,$username,$profile_image;
 
     
     public function __construct(){
@@ -34,7 +34,7 @@ class PublicationModel extends Model implements IModel{
     public function getAll(){
         $items = [];
         try{
-            $query = $this->query('SELECT * FROM publications INNER JOIN users on publications.id_user = users.id_user ORDER BY publications.id_publication DESC');
+            $query = $this->query('SELECT * FROM publications INNER JOIN users on publications.id_user = users.id_user INNER JOIN profile on publications.id_user = profile.fk_user ORDER BY publications.id_publication DESC');
             
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new PublicationModel();
@@ -93,6 +93,7 @@ class PublicationModel extends Model implements IModel{
         $this->file = $array['file'];
         $this->id_user = $array['id_user'];
         $this->username = $array['username'];
+        $this->profile_image = $array['profile_image'];
     }
 
     public function setId($id_publication){         $this->id_publication = $id_publication; }
@@ -105,6 +106,7 @@ class PublicationModel extends Model implements IModel{
     public function getFile(){              return $this->file; }
     public function getUserId(){            return $this->id_user; }
     public function getUsernameP(){         return $this->username; }
+    public function getProfileImage(){         return $this->profile_image; }
 }
 
 ?>

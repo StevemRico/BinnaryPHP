@@ -1,6 +1,6 @@
 <?php
     $publications             = $this->d['publications'];
-
+    $user                     = $this->d['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,18 +20,21 @@
             foreach ($publications as $publication ) { ?>
                 <div class='Publication-card '>
                     <div class='Publication-card-header'>
-                            <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/logo-batman-2144613.jpg?itok=6w_ZtOfC" alt="">
+                            <img src="<?php echo $publication['profile_image'] ?>" alt="">
                             <label><?php echo $publication['username'] ?></label>
                     </div>
                     <div class='Publication-card-body'>
                         <img src="<?php echo $publication['file'] ?>" alt='0'>
                     </div>
                     <div class='Publication-card-description'>
+                        <img src="<?php echo $publication['profile_image'] ?>" alt="">
+                        <label><?php echo $publication['username'] ?></label>
+                        <br>
                         <label><?php echo $publication['description'] ?></label>
                     </div>
-                    <div class='Publication-card-Comments'>
-                        <label><?php echo $publication['description'] ?></label>
-                    </div>
+                    <!-- <div class='Publication-card-Comments'>
+                        <label><?php //echo $publication['description'] ?></label>
+                    </div> -->
                 </div>
                 <br>
                 <?php   } ?>

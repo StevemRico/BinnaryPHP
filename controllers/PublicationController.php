@@ -20,8 +20,6 @@ class Publication extends SessionController{
 
     function newPublication(){
         if($this->existPOST(['description'])){
-            error_log("NEWPUBLICATIONN!!!!!!!!!!!!!!!!!!!!!!!!");
-            
             $description = $this->getPost('description');
             $fileR = getimagesize($_FILES["file"]["tmp_name"]);
             if($fileR !== false){
