@@ -7,6 +7,8 @@ class PublicationModel extends Model implements IModel{
     
     public function __construct(){
         parent::__construct();
+        $this->description = '';
+        $this->file = '';
     }
     
     public function saveImg(){
@@ -14,12 +16,14 @@ class PublicationModel extends Model implements IModel{
     }
     
     public function save(){
+        $user = new Session();
+        $user_id = $user->getCurrentUser();
         try{
-            $query = $this->prepare('INSERT INTO publication () VALUES()');
+            $query = $this->prepare('INSERT INTO publications (description,file,id_user) VALUES(:description,:file,:id_user)');
             $query->execute([
-                '$description'  => $this->description, 
+                'description'  => $this->description, 
                 'file'          => $this->file,
-                'id_user'       => $this->id_user
+                'id_user'          => $user_id
             ]);
             return true;
         }catch(PDOException $e){
@@ -30,7 +34,7 @@ class PublicationModel extends Model implements IModel{
     public function getAll(){
         $items = [];
         try{
-            $query = $this->query('SELECT * FROM publications INNER JOIN users on publications.id_user = users.id_user');
+            $query = $this->query('SELECT * FROM publications INNER JOIN users on publications.id_user = users.id_user ORDER BY publications.id_publication DESC');
             
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new PublicationModel();

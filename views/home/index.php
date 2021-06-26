@@ -12,11 +12,10 @@
     <?php echo '<link href="./public/css/home.css" rel="stylesheet" type="text/css">'; ?>
     <?php echo '<link href="./public/css/Publication.css" rel="stylesheet" type="text/css">'; ?>
 </head>
-<body>
-    <div class="container">
+<body class=''>
+    <div class="container" style="margin-top: 5%;">
         <div class="home-container">
-            <h1>HOME</h1>
-            <div class="row">
+            <div class="row justify-content-center">
             <?php
             foreach ($publications as $publication ) { ?>
                 <div class='Publication-card '>
@@ -34,6 +33,7 @@
                         <label><?php echo $publication['description'] ?></label>
                     </div>
                 </div>
+                <br>
                 <?php   } ?>
             </div>
         </div>

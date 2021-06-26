@@ -14,6 +14,7 @@
         }
 
         public function save(){
+            error_log("NSAVE???????????????????????");
             try{
                 $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status) VALUES(:username, :password, :role, :email, :phone, 1 )');
                 $query->execute([

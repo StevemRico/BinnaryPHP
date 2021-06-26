@@ -12,6 +12,8 @@ error_log( "binnary/index.php/Line 9 -> Inicio de aplicacion web" );
 
 echo '<link href="./public/css/bootstrap.min.css" rel="stylesheet" type="text/css">';
 echo '<link href="./public/css/global.css" rel="stylesheet" type="text/css">';
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>';
+echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>';
 
 require_once 'libs/database.php';
 require_once 'class/errorMessages.php';

@@ -1,5 +1,5 @@
 .Publication-card{
-    width: 40%;
+    width: 50%;
     height: auto;
     background: #FAFAfa;
     /* background: #000; */
@@ -8,10 +8,7 @@
     margin-bottom: 20px;
 }
 
-.Publication-card-header{
-    /* display: inline; */
-    /* border: 1px solid black; */
-}
+/* .Publication-card-header{ } */
 
 .Publication-card-header img{
     width: 10%;
@@ -35,16 +32,21 @@
     color: black;
 }
 
-.Publication-card-description{
-    /* border: 1px solid black; */
-}
+/* .Publication-card-description{
+} */
+    
 .Publication-card-description label{
     color: black;
 }
 
-.Publication-card-Comments{
-    /* border: 1px solid black; */
-}
+/* .Publication-card-Comments{
+} */
+    
 .Publication-card-Comments label{
     color: black;
+}
+
+.PostPublicationForm{
+    margin-left: 80px;
+    margin-top: 80px;
 }

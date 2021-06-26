@@ -15,6 +15,7 @@ class Signup extends SessionController{
     }
 
     function newUser(){
+        error_log("SISAS ES ACA PERRO");
         if($this->existPOST(['username', 'password', 'phone', 'email'])){
             
             $username = $this->getPost('username');

@@ -39,7 +39,7 @@
                         <input type='text' placeholder='Search' />
                     </div>
                 </a>
-                <a href="<?php echo constant('URL'); ?>Home" class='sidemenu-item'>
+                <a href="<?php echo constant('URL'); ?>home" class='sidemenu-item'>
                     <div class='sidemenu-item-logo'>
                         <i class="fas fa-home"></i>
                     </div>
@@ -47,7 +47,7 @@
                         <span>Home</span>
                     </div>
                 </a>
-                <a href="" class='sidemenu-item'>
+                <a href="<?php echo constant('URL'); ?>publication" class='sidemenu-item'>
                     <div class='sidemenu-item-logo'>
                         <i class="fas fa-upload"></i>
                     </div>
@@ -76,3 +76,7 @@
             </div>
         </div>
 </nav>
+
+<?php //require_once './controllers/PublicationController.php'; ?>
+<?php require_once './public/components/modalPubli.php'; ?>
+

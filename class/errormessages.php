@@ -11,6 +11,7 @@ class ErrorsMessages{
     const ERR_LOGIN_AUTHENTICATE_EMPTY          = "Llene-esa-mierda-HPTA-sea-serio";
     const ERR_LOGIN_AUTHENTICATE_DATA           = "Sapo-Perro-HPTA-Rote-bien-los-datos";
     const ERR_LOGIN_AUTHENTICATE                = "9";
+    const ERR_POSTPUBLI_NEWPUBLICATION_EMPTY    = "10";
     
 
     private $errorsList = [];
@@ -26,6 +27,7 @@ class ErrorsMessages{
             ErrorsMessages::ERR_LOGIN_AUTHENTICATE_EMPTY => 'Campos Vacios',
             ErrorsMessages::ERR_LOGIN_AUTHENTICATE_DATA => 'Usuario y/o incontraseña correctos',
             ErrorsMessages::ERR_LOGIN_AUTHENTICATE => 'Ocurrio un error en el sistema Login',
+            ErrorsMessages::ERR_POSTPUBLI_NEWPUBLICATION_EMPTY => 'pUEDE LlEnAr LoS DaTos HpTa'
         ];
     }
 
