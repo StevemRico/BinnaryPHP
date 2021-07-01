@@ -1,0 +1,37 @@
+.profile-container{
+    /* background: #495a85; */
+    padding: 10% 10px;
+    /* height: 70%; */
+}
+.Profile-Info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.Profile-Info-img{
+    padding: 0 9%;
+}
+
+.Profile-Info-Data{
+    padding: 0 9%;
+}
+
+.Profile-Info-Data-Description{
+    color: black;
+    text-transform: capitalize;
+}
+
+.Profile-Infor-Data-Follows{
+    color: black;
+}
+
+.Publication-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding: 10px 10px;
+}
+
+.Publication-card-body img{
+    width: 100%;
+    padding: 5px 5px;
+    /* height: 100px; */
+}

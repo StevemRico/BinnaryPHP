@@ -1,42 +1,40 @@
 <?php
 
-class Home extends SessionController{
+// require_once 'models/UserModel.php';
 
-    // private $id, $username, $password, $email, $phone, $role;
-    private $id_publication,$description,$file,$id_user,$publicationsM;
+class Profile extends SessionController{
 
     function __construct(){
         parent::__construct();
         $this->user = $this->getUserSessionData();
     }
-    
+
     function render(){
         $publications = $this->getPublications();
-        
+        $this->view->errorMessage = '';
         $this->view->render('header/index', [
             'user' => $this->user
         ]);
-        $this->view->render('home/index', [
+        $this->view->render('profile/index', [
             'publications' => $publications,
-            'user' => $this->user
+            'user' => $this->user,
+            'hole' => 'Hola'
         ]);
     }
 
     function getPublications(){
         $res = [];
         $this->publicationsM = new PublicationModel();
-        $publications = $this->publicationsM->getAll();
+        $publications = $this->publicationsM->getUserPublication($this->user->getId());
         // $publications = array( "1" => "bar", "2" => "foo", "3" => "foo", "4" => "foo", "5" => "foo", "6" => "foo", "7" => "foo", );
-        
         foreach ($publications as $publication) {
             $categoryArray = [];
-            $categoryArray['description'] = $publication->getDescription();
             $categoryArray['file'] = $publication->getFile();
-            $categoryArray['username'] = $publication->getUsernameP();
-            $categoryArray['profile_image'] = $publication->getProfileImage();
             array_push($res, $categoryArray);
         }
         return $res;
     }
-
+    
 }
+
+?>

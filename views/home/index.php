@@ -27,17 +27,18 @@
                         <img src="<?php echo $publication['file'] ?>" alt='0'>
                     </div>
                     <div class='Publication-card-description'>
-                        <img src="<?php echo $publication['profile_image'] ?>" alt="">
-                        <label><?php echo $publication['username'] ?></label>
-                        <br>
-                        <label><?php echo $publication['description'] ?></label>
+                        <div class='Publication-card-description-header'>
+                            <img src="<?php echo $publication['profile_image'] ?>" alt="">
+                            <label><?php echo $publication['username'] ?></label>
+                        </div>
+                        <label class='Publication-card-description-desc'><?php echo $publication['description'] ?></label>
                     </div>
                     <!-- <div class='Publication-card-Comments'>
                         <label><?php //echo $publication['description'] ?></label>
                     </div> -->
                 </div>
                 <br>
-                <?php   } ?>
+                <?php } ?>
             </div>
         </div>
     </div>

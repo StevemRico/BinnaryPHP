@@ -12,6 +12,7 @@
             $this->phone = '';
             $this->role = '';
             $this->picture_profile = '';
+            $this->profile_description = '';
         }
 
         public function save(){
@@ -66,8 +67,7 @@
                 $this->role = $user['role'];
                 $this->phone = $user['phone_number'];
                 $this->picture_profile = $user['profile_image'];
-
-                // print_r($user);
+                $this->profile_description = $user['description_profile'];
                 
                 return $this;
             }catch(PDOException $e){
@@ -112,6 +112,7 @@
             $this->role = $array['role'];
             $this->phone = $array['phone_number'];
             $this->picture_profile = $array['profile_image'];
+            $this->profile_description = $array['description_profile'];
         }
 
         public function existsUsername($username){
@@ -195,6 +196,7 @@
         public function getPhone(){     return $this->phone; }
         public function getRole(){      return $this->role; }
         public function getPicture(){      return $this->picture_profile; }
+        public function getProfileDescription(){      return $this->profile_description; }
 
     }
 

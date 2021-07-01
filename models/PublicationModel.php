@@ -11,10 +11,6 @@ class PublicationModel extends Model implements IModel{
         $this->file = '';
     }
     
-    public function saveImg(){
-        
-    }
-    
     public function save(){
         $user = new Session();
         $user_id = $user->getCurrentUser();
@@ -38,10 +34,24 @@ class PublicationModel extends Model implements IModel{
             
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new PublicationModel();
+                $item->fromPublication($p);
+                array_push($items, $item);
+            }
+            return $items;
+        }catch(PDOException $e){
+            error_log($e);
+        }
+    }
+
+    public function getUserPublication($id_user){
+        $items = [];
+        try{
+            $query = $this->query('SELECT file,id_publication FROM publications WHERE id_user = 47');
+            while($p = $query->fetch(PDO::FETCH_ASSOC)){
+                $item = new PublicationModel();
                 $item->from($p);
                 array_push($items, $item);
             }
-            error_log("GetAllPublication");
             return $items;
         }catch(PDOException $e){
             error_log($e);
@@ -89,6 +99,11 @@ class PublicationModel extends Model implements IModel{
 
     public function from($array){
         $this->id_publication = $array['id_publication'];
+        $this->file = $array['file'];
+    }
+
+    public function fromPublication($array){
+        $this->id_publication = $array['id_publication'];
         $this->description = $array['description'];
         $this->file = $array['file'];
         $this->id_user = $array['id_user'];
@@ -101,12 +116,12 @@ class PublicationModel extends Model implements IModel{
     public function setFile($file){                 $this->file = $file; }
     public function setUserId($id_user){            $this->id_user = $id_user; }
     
-    public function getId(){                return $this->id_publication; }
-    public function getDescription(){       return $this->description; }
-    public function getFile(){              return $this->file; }
-    public function getUserId(){            return $this->id_user; }
-    public function getUsernameP(){         return $this->username; }
-    public function getProfileImage(){         return $this->profile_image; }
+    public function getId(){                        return $this->id_publication; }
+    public function getDescription(){               return $this->description; }
+    public function getFile(){                      return $this->file; }
+    public function getUserId(){                    return $this->id_user; }
+    public function getUsernameP(){                 return $this->username; }
+    public function getProfileImage(){              return $this->profile_image; }
 }
 
 ?>

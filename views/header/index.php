@@ -17,10 +17,9 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div class='sidemenu-items'>
-                <a href="" style="text-decoration: none;">
+                <a href="<?php echo constant('URL')?>profile" style="text-decoration: none;">
                     <div class='sidemenu-profile'>
                         <div class='sidemanu-img-profile'>
-                            <!-- <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/11/logo-batman-2144613.jpg?itok=6w_ZtOfC" alt='0' /> -->
                             <img src="<?php echo $user->getPicture() ?>" alt='0' />
                         </div>
                         <div class='sidemenu-username'>
@@ -64,6 +63,14 @@
                         <span>Messages</span>
                     </div>
                 </a>
+                <a href="" class='sidemenu-item'>
+                    <div class='sidemenu-item-logo'>
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <div class='sidemenu-item-text'>
+                        <span>Settings</span>
+                    </div>
+                </a>
             </div>
             <div class='sidemenu-logout'>
                 <a href="<?php echo constant('URL'); ?>logout" class='sidemenu-item'>
@@ -79,5 +86,4 @@
 </nav>
 
 <?php //require_once './controllers/PublicationController.php'; ?>
-<?php require_once './public/components/modalPubli.php'; ?>
 
