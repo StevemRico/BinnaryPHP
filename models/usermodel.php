@@ -17,7 +17,7 @@
 
         public function save(){
             try{
-                $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status) VALUES(:username, :password, :role, :email, :phone, 1 )');
+                $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status, register_date, profile_image) VALUES(:username, :password, :role, :email, :phone, 1, CURRENT_TIMESTAMP, "./public/img/profile/picture-profile.png" )');
                 $query->execute([
                     'username'  => $this->username, 
                     'password'  => $this->password,
@@ -25,8 +25,6 @@
                     'email'      => $this->email,
                     'phone'     => $this->phone
                     ]);
-                    $query2 = $this->prepare('INSERT INTO profile (register_date,fk_user,profile_image) VALUES (CURRENT_TIMESTAMP,(SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1),"./public/img/profile/picture-profile.png")');
-                    $query2->execute();
                 return true;
             }catch(PDOException $e){
                 error_log($e);
@@ -57,7 +55,7 @@
 
         public function get($id){
             try{
-                $query = $this->prepare('SELECT * FROM users INNER JOIN profile on users.id_user = profile.fk_user WHERE id_user = :id');
+                $query = $this->prepare('SELECT * FROM users WHERE id_user = :id');
                 $query->execute([ 'id' => $id]);
                 $user = $query->fetch(PDO::FETCH_ASSOC);
                 
