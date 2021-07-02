@@ -30,7 +30,7 @@ class PublicationModel extends Model implements IModel{
     public function getAll(){
         $items = [];
         try{
-            $query = $this->query('SELECT * FROM publications INNER JOIN users on publications.id_user = users.id_user INNER JOIN profile on publications.id_user = profile.fk_user ORDER BY publications.id_publication DESC');
+            $query = $this->query('SELECT * FROM publications INNER JOIN users on publications.id_user = users.id_user ORDER BY publications.id_publication DESC');
             
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new PublicationModel();
@@ -46,7 +46,8 @@ class PublicationModel extends Model implements IModel{
     public function getUserPublication($id_user){
         $items = [];
         try{
-            $query = $this->query('SELECT file,id_publication FROM publications WHERE id_user = 47');
+            $query = $this->query('SELECT file,id_publication FROM publications WHERE id_user = :id');
+            $query->execute(['id' => $id_user]);
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new PublicationModel();
                 $item->from($p);
