@@ -8,7 +8,7 @@ ini_set("error_log", "php-error.log");
 
 //Carpeta/Archivo/Metodo/Condicional/Linea de codigo -> Comentario
 
-error_log( "binnary/index.php/Line 9 -> Inicio de aplicacion web" );
+error_log( "binnary/index.php/Line 11 -> Inicio de aplicacion web" );
 
 echo '<link href="./public/css/bootstrap.min.css" rel="stylesheet" type="text/css">';
 echo '<link href="./public/css/global.css" rel="stylesheet" type="text/css">';

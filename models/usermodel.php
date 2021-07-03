@@ -76,7 +76,7 @@
 
         public function delete($id){
             try{
-                $query = $this->prepare('DELETE FROM users WHERE id_user = :id');
+                $query = $this->prepare('DELETE FROM users WHERE id_user = :id'); // No se borra solo se cambia de estado
                 $query->execute([ 'id' => $id]);
                 return true;
             }catch(PDOException $e){

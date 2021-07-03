@@ -13,6 +13,7 @@
             <div class='sidemenu-header'>
                 <span>Binnary</span>
             </div>
+            <br>
             <div class='sidemenu-btn' onclick="sidebarexpanded()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -71,8 +72,6 @@
                         <span>Settings</span>
                     </div>
                 </a>
-            </div>
-            <div class='sidemenu-logout'>
                 <a href="<?php echo constant('URL'); ?>logout" class='sidemenu-item'>
                     <div class='sidemenu-item-logo'>
                         <i class="fas fa-power-off"></i>
