@@ -22,7 +22,7 @@ class ErrorsMessages{
             ErrorsMessages::ERR_SIGNUP_NEWUSER_EMPTY => 'Los campos se encuentran vacios',
             ErrorsMessages::ERR_SIGNUP_USERNAME_EXISTS => 'El Username ya existe',
             ErrorsMessages::ERR_SIGNUP_EMAIL_EXISTS => 'El Email ya existe',
-            ErrorsMessages::ERR_SIGNUP_PHONE_EXISTS => 'El Phone ya existe',
+            ErrorsMessages::ERR_SIGNUP_PHONE_EXISTS => 'El  Phone ya existe',
             ErrorsMessages::ERR_SIGNUP_NEWUSER => 'Ocurrio un error en el sistema Register',
             ErrorsMessages::ERR_LOGIN_AUTHENTICATE_EMPTY => 'Campos Vacios',
             ErrorsMessages::ERR_LOGIN_AUTHENTICATE_DATA => 'Usuario y/o incontraseña correctos',
