@@ -16,17 +16,12 @@
             "role" : "user"
         },
         {
-            "site" : "messages", 
-            "access" : "private", 
-            "role" : "user"
-        },
-        {
-            "site" : "user", 
-            "access" : "private", 
-            "role" : "user"
-        },
-        {
             "site" : "header", 
+            "access" : "private", 
+            "role" : "user"
+        },
+        {
+            "site" : "profile", 
             "access" : "private", 
             "role" : "user"
         },
@@ -34,14 +29,9 @@
             "site" : "publication", 
             "access" : "private", 
             "role" : "user"
-        },
-        {
-            "site" : "admin", 
-            "access" : "private", 
-            "role" : "admin"
         }
     ],
-
+    
     "default-sites":{
         "user": "home",
         "admin": "admin"

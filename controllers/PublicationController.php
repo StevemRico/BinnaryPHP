@@ -28,7 +28,6 @@ class Publication extends SessionController{
             $destino = './public/img/publications/'.$image;
             copy($imageR,$destino);
             $file = $destino;
-            error_log("IMAGEEEEEEEE".$destino);
             }
             
             $Publi = new PublicationModel();

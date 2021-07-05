@@ -12,11 +12,12 @@
             $this->phone = '';
             $this->role = '';
             $this->picture_profile = '';
+            $this->profile_description = '';
         }
 
         public function save(){
             try{
-                $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status) VALUES(:username, :password, :role, :email, :phone, 1 )');
+                $query = $this->prepare('INSERT INTO users (username, password, role, email, phone_number, user_status, register_date, profile_image) VALUES(:username, :password, :role, :email, :phone, 1, CURRENT_TIMESTAMP, "./public/img/profile/picture-profile.png" )');
                 $query->execute([
                     'username'  => $this->username, 
                     'password'  => $this->password,
@@ -24,8 +25,6 @@
                     'email'      => $this->email,
                     'phone'     => $this->phone
                     ]);
-                    $query2 = $this->prepare('INSERT INTO profile (register_date,fk_user,profile_image) VALUES (CURRENT_TIMESTAMP,(SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1),"./public/img/profile/picture-profile.png")');
-                    $query2->execute();
                 return true;
             }catch(PDOException $e){
                 error_log($e);
@@ -56,7 +55,7 @@
 
         public function get($id){
             try{
-                $query = $this->prepare('SELECT * FROM users INNER JOIN profile on users.id_user = profile.fk_user WHERE id_user = :id');
+                $query = $this->prepare('SELECT * FROM users WHERE id_user = :id');
                 $query->execute([ 'id' => $id]);
                 $user = $query->fetch(PDO::FETCH_ASSOC);
                 
@@ -66,8 +65,7 @@
                 $this->role = $user['role'];
                 $this->phone = $user['phone_number'];
                 $this->picture_profile = $user['profile_image'];
-
-                // print_r($user);
+                $this->profile_description = $user['description_profile'];
                 
                 return $this;
             }catch(PDOException $e){
@@ -78,7 +76,7 @@
 
         public function delete($id){
             try{
-                $query = $this->prepare('DELETE FROM users WHERE id_user = :id');
+                $query = $this->prepare('DELETE FROM users WHERE id_user = :id'); // No se borra solo se cambia de estado
                 $query->execute([ 'id' => $id]);
                 return true;
             }catch(PDOException $e){
@@ -112,6 +110,7 @@
             $this->role = $array['role'];
             $this->phone = $array['phone_number'];
             $this->picture_profile = $array['profile_image'];
+            $this->profile_description = $array['description_profile'];
         }
 
         public function existsUsername($username){
@@ -195,6 +194,7 @@
         public function getPhone(){     return $this->phone; }
         public function getRole(){      return $this->role; }
         public function getPicture(){      return $this->picture_profile; }
+        public function getProfileDescription(){      return $this->profile_description; }
 
     }
 

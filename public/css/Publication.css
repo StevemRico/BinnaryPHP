@@ -35,19 +35,32 @@
 .Publication-card-description{
 }
 
-.Publication-card-description img{
-    width: 8%;
+.Publication-card-description-header img{
+    width: 7%;
     margin-left: 20px;
     padding: 10px 0;
     max-height: 100px;
 }
+.Publication-card-description-header label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
     
 .Publication-card-description label{
     color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+.Publication-card-description-desc{
+    padding: 10px 15%;
+    margin-bottom: 5%;
 }
 
 /* .Publication-card-Comments{
 } */
+
     
 .Publication-card-Comments label{
     color: black;

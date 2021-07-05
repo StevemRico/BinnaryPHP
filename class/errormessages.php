@@ -8,7 +8,7 @@ class ErrorsMessages{
     const ERR_SIGNUP_EMAIL_EXISTS               = "4";
     const ERR_SIGNUP_PHONE_EXISTS               = "5";
     const ERR_SIGNUP_NEWUSER                    = "6";
-    const ERR_LOGIN_AUTHENTICATE_EMPTY          = "Llene-esa-mierda-HPTA-no-sea-tan-steven";
+    const ERR_LOGIN_AUTHENTICATE_EMPTY          = "Llene-esa-mierda-HPTA-no-sea-tan-JULIAN";
     const ERR_LOGIN_AUTHENTICATE_DATA           = "Sapo-Perro-HPTA-Rote-bien-los-datos";
     const ERR_LOGIN_AUTHENTICATE                = "9";
     const ERR_POSTPUBLI_NEWPUBLICATION_EMPTY    = "10";
