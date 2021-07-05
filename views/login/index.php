@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <?php echo '<link href="./public/css/Login.css" rel="stylesheet" type="text/css">'; ?>
-</head>
+</head>         
 <body>
     <form action="<?php echo constant('URL'); ?>login/authenticate" method="POST">
         <div class="parent">
