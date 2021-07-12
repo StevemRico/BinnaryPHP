@@ -1,6 +1,5 @@
 <?php
 
-//No entiendo una mierda
 require_once 'controllers/erroresController.php';
 
 class App{
