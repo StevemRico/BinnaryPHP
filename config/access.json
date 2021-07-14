@@ -29,6 +29,11 @@
             "site" : "publication", 
             "access" : "private", 
             "role" : "user"
+        },
+        {
+            "site" : "Setting",
+            "access" :"private",
+            "role": "user"
         }
     ],
     

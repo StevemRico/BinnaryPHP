@@ -12,7 +12,7 @@
         $this->view->render('header/index',[
         'user' => $this->user
         ]);
-        $this->view->render('UserSetting/index.php',[]);
+        $this->view->render('UserSettings/index',[]);
         }
     }
 ?>

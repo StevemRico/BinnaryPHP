@@ -64,14 +64,17 @@
                         <span>Messages</span>
                     </div>
                 </a>
-                <a href="<?php echo constant('URL'); ?>UserSettings" class='sidemenu-item'>
-                    <div class='sidemenu-item-logo'>
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <div class='sidemenu-item-text'>
-                        <span>Settings</span>
-                    </div>
+
+                <!-- Settings-->
+                <a href="<?php echo constant('URL'); ?>Setting" class='sidemenu-item'>
+                <div class='sidemenu-item-logo'>
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <div class='sidemenu-item-text'>
+                    <span>Settings</span>
+                </div>
                 </a>
+
                 <a href="<?php echo constant('URL'); ?>logout" class='sidemenu-item'>
                     <div class='sidemenu-item-logo'>
                         <i class="fas fa-power-off"></i>
@@ -85,4 +88,5 @@
 </nav>
 
 <?php //require_once './controllers/PublicationController.php'; ?>
+
 
