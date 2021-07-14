@@ -12,6 +12,7 @@
     <?php echo '<link href="./public/css/home.css" rel="stylesheet" type="text/css">'; ?>
     <?php echo '<link href="./public/css/Publication.css" rel="stylesheet" type="text/css">'; ?>
 </head>
+
 <body class=''>
     <div class="container" style="margin-top: 5%;">
         <div class="home-container">
