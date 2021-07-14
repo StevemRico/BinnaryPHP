@@ -64,7 +64,7 @@
                         <span>Messages</span>
                     </div>
                 </a>
-                <a href="" class='sidemenu-item'>
+                <a href="<?php echo constant('URL'); ?>UserSettings" class='sidemenu-item'>
                     <div class='sidemenu-item-logo'>
                         <i class="fas fa-user-cog"></i>
                     </div>
