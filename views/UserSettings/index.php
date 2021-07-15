@@ -10,11 +10,16 @@
     </head>
 
     <!--Settings options-->
-    <body class=''>
+    <form action="<?php echo constant('URL');?>Setting/update" method="POST" enctype="multipart/form-data">
     <div class="container" style="margin-top:4%;">
     <div class="home-container">
     <div class="row justify-content-center">
     
+    <div class="form-group">
+    <label for="">Profile Photo</label><br>
+    <input type="file" name="file" id="file" placeholder="File" class="form-control-fileile">
+    </div>
+
     <div class="form-group">
     <label for ="">username</label>
     <input type="text" name="username" class="form-control">
@@ -45,10 +50,12 @@
     <input type="date" name="birthday_day" class="form-control">
     </div>
 
+
     <div class="form-group">
-    <button type="submit" name="Update" class="btn btn-primary">UpdateS</button>
+    <button type="submit" name="Update" class="btn btn-primary">Update</button>
     </div>
 
+    </form>
     </div>
     </div>
     </div> 
