@@ -103,6 +103,20 @@
             }
         }
 
+        public function updateEmail(){
+            try{
+                $query = $this->prepare('UPDATE users SET email = :email WHERE id_user = :id');
+                $query->execute([
+                    'id'        => $this->id,
+                    'email' => $this->email
+                    ]);
+                return true;
+            }catch(PDOException $e){
+                error_log($e);
+                return false;
+            }
+        }
+
         public function from($array){
             $this->id = $array['id_user'];
             $this->username = $array['username'];
@@ -165,7 +179,10 @@
         public function setPhone($phone){ $this->phone = $phone; }
         public function setRole($role){ $this->role = $role; }
         public function setPicture($picture_profile){ $this->picture_profile = $picture_profile; }
-        public function setPassword($password, $hash = true){ 
+        public function setGender($gender){$this->gender=$gender;}
+        public function setDescription($description){$this->gender=$description;}
+        public function setBirthday($birthday){$this->Birthday=$birthday;}
+        public function setPassword($password, $hash = true){
             if($hash){
                 $this->password = $this->getHashedPassword($password);
             }else{

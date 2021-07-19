@@ -10,14 +10,15 @@
     </head>
 
     <!--Settings options-->
-    <form action="<?php echo constant('URL');?>Setting/update" method="POST" enctype="multipart/form-data">
+    
+    <form action="<?php echo constant('URL');?>Setting/updateData" method="POST" enctype="multipart/form-data">
     <div class="container" style="margin-top:4%;">
     <div class="home-container">
     <div class="row justify-content-center">
     
     <div class="form-group">
     <label for="">Profile Photo</label><br>
-    <input type="file" name="file" id="file" placeholder="File" class="form-control-fileile">
+    <input type="file" name="file" id="profile_image" placeholder="File" class="form-control-fileile">
     </div>
 
     <div class="form-group">

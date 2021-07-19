@@ -16,7 +16,7 @@ class Login extends SessionController{
 
     function authenticate(){
         if( $this->existPOST(['username', 'password']) ){
-            $username = $this->getPost('username');
+            $username = $this->getPost('username'); // $_POST['username'];
             $password = $this->getPost('password');
 
             if($username == '' || empty($username) || $password == '' || empty($password)){

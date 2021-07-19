@@ -40,6 +40,18 @@ class Controller{
     function getGet($name){ return $_GET[$name]; }
     function getPost($name){ return $_POST[$name]; }
 
+    ////////////////////////////////////////////////////////
+
+   // function update($table, $id, $fields){
+     //   $data = "[]";
+       // $params ="";
+
+    //    foreach($fields as $username || $email || $phone || $password || $description || $gender || $birthday=> $value){
+      //      
+        //}
+    //}
+
+    ////////////////////////////////////////////////////////
     function redirect($url, $mensajes = []){
         $data = [];
         $params = '';
